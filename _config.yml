@@ -7,7 +7,7 @@ name                    : &name "Enze Ma"
 description             : &description "Enze Ma's Academic Portfolio"   # Site description for search engines
 url                     : https://[your-github-username].github.io # [CRITICAL] Replace [your-github-username] with your GitHub username
 baseurl                 : "" # The subpath of your site, e.g. /blog. Leave blank unless you know you need it.
-repository              : "[your-github-username]/[your-repo-name]" # [CRITICAL] Replace with your username/repository name
+repository              : "[sora1998]/[sora1998.github.io]" # [CRITICAL] Replace with your username/repository name
 
 # Site Author - This content appears in the sidebar on the left.
 author:
