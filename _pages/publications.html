@@ -1,35 +1,72 @@
 ---
-layout: archive
+layout: single
 title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<style>
+  .pub-list { list-style: none; padding-left: 0; }
+  .pub-item { margin: 0 0 1rem 0; }
+  .pub-title { font-weight: 600; }
+  .pub-meta { color: #555; font-size: 0.95rem; line-height: 1.3; }
+</style>
+
+{% assign pubs_all = site.publications | sort: "date" | reverse %}
+
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+  {% for category in site.publication_category %}
+    {% assign group_key = category[0] %}
+    {% assign group_title = category[1].title %}
+    {% assign group_items = pubs_all | where: "category", group_key %}
+    {% if group_items.size > 0 %}
+      <h2>{{ group_title }}</h2>
+      <hr/>
+      <ul class="pub-list">
+        {% for p in group_items %}
+          <li class="pub-item">
+            <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
+            <span class="pub-meta">
+              {% if p.venue %}{{ p.venue }}{% endif %}
+              {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
+              <br/>
+              {% if p.authors %}
+                {% if p.authors.first %}
+                  {{ p.authors | join: ", " }}
+                {% else %}
+                  {{ p.authors }}
+                {% endif %}
+              {% elsif p.citation %}
+                {{ p.citation | split: '.' | first }}
+              {% endif %}
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   {% endfor %}
 {% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+  <ul class="pub-list">
+    {% for p in pubs_all %}
+      <li class="pub-item">
+        <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
+        <span class="pub-meta">
+          {% if p.venue %}{{ p.venue }}{% endif %}
+          {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
+          <br/>
+          {% if p.authors %}
+            {% if p.authors.first %}
+              {{ p.authors | join: ", " }}
+            {% else %}
+              {{ p.authors }}
+            {% endif %}
+          {% elsif p.citation %}
+            {{ p.citation | split: '.' | first }}
+          {% endif %}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
 {% endif %}
-
-
