@@ -16,13 +16,7 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
+        <img src={% if teaser contains "://" %}"{{ teaser }}"{% else %}"{{ teaser | prepend: "/images/" | prepend: base_path }}"{% endif %} alt="">
       </div>
     {% endif %}
 
@@ -37,16 +31,14 @@
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
-    {%- comment -%} teaching as before {%- endcomment -%}
     {% if post.collection == 'teaching' %}
       <p>{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
 
-    {%- comment -%} publications/publication: authors  + two spaces + venue,year in ONE <p> {%- endcomment -%}
     {% elsif post.collection == 'publications' or post.collection == 'publication' %}
       {% assign author_line = post.authors | default: post.author %}
       {% if author_line %}
@@ -55,41 +47,36 @@
         {% else %}
           {% assign formatted_authors = author_line %}
         {% endif %}
-        <p class="pub-meta">
-          {{ formatted_authors }}{% if post.venue %}&nbsp;&nbsp;{{ post.venue }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}{% endif %}
-        </p>
       {% else %}
-        {% if post.venue %}
-          <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-        {% endif %}
+        {% assign formatted_authors = "" %}
       {% endif %}
 
-    {%- comment -%} other content types keep original venue/date lines {%- endcomment -%}
-    {% elsif post.venue %}
-      <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-    {% elsif post.date %}
-      <p class="page__date">
-        <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong>
-        <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">
-          {{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}
-        </time>
+      <p class="pub-meta">
+        {{ formatted_authors }}{% if post.venue %}&nbsp;&nbsp;{{ post.venue }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}{% endif %}
       </p>
+
+    {% else %}
+      {% if post.venue %}
+        <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+      {% elsif post.date %}
+        <p class="page__date">
+          <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong>
+          <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">
+            {{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}
+          </time>
+        </p>
+      {% endif %}
     {% endif %}
 
-    {%- comment -%} DO NOT show excerpt/abstract for publications {%- endcomment -%}
     {% if post.collection != 'publications' and post.collection != 'publication' %}
       {% if post.excerpt and site.read_more != 'enabled' %}
         <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
       {% elsif post.excerpt and site.read_more == 'enabled' %}
         <p class="archive__item-excerpt" itemprop="description">
-          <p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
-            <strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong>
-          </p>
+          <p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
         </p>
       {% endif %}
     {% endif %}
-
-    {# removed all citation/download blocks #}
 
   </article>
 </div>
