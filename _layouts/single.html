@@ -37,7 +37,19 @@ layout: default
             {% assign author_line = page.authors | default: page.author %}
             {% if author_line %}
               {% if author_line.first %}
-                {% assign formatted_authors = author_line | join: ", " %}
+                {% assign formatted_authors = "" %}
+                {% for author in author_line %}
+                  {% if author == "Enze Ma" %}
+                    {% assign formatted_author = "<strong>" | append: author | append: "</strong>" %}
+                  {% else %}
+                    {% assign formatted_author = author %}
+                  {% endif %}
+                  {% if forloop.first %}
+                    {% assign formatted_authors = formatted_author %}
+                  {% else %}
+                    {% assign formatted_authors = formatted_authors | append: ", " | append: formatted_author %}
+                  {% endif %}
+                {% endfor %}
               {% else %}
                 {% assign formatted_authors = author_line %}
               {% endif %}
