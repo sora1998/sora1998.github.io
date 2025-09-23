@@ -45,21 +45,21 @@
       </p>
     {% endif %}
 
-    {# Publications block: show authors + venue/year #}
+    {%- comment -%} Publications: authors + venue/year; no abstract/excerpt {%- endcomment -%}
     {% if post.collection == 'publications' or post.collection == 'publication' %}
-      {% assign author_line = post.authors | default: post.author %}
+
+      {%- assign author_line = post.authors | default: post.author -%}
       {% if author_line %}
+        {% if author_line.first %}
+          {%- assign formatted_authors = author_line | join: ", " -%}
+        {% else %}
+          {%- assign formatted_authors = author_line -%}
+        {% endif %}
         <p class="pub-authors">
-          {% if author_line %}
-            {% if author_line.first %}
-              {%- assign formatted_authors = author_line | join: ", " -%}
-            {% else %}
-              {%- assign formatted_authors = author_line -%}
-            {% endif %}
-            <p class="pub-authors">{{ formatted_authors }}</p>
-          {% endif %}
+          {{ formatted_authors | markdownify | strip | remove: '<p>' | remove: '</p>' }}
         </p>
       {% endif %}
+
       {% if post.venue %}
         <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
       {% else %}
@@ -86,7 +86,7 @@
       </p>
     {% endif %}
 
-    {# Hide excerpts for publications (both slugs) #}
+    {%- comment -%} Show excerpt only for non-publications {%- endcomment -%}
     {% if post.collection != 'publications' and post.collection != 'publication' %}
       {% if post.excerpt and site.read_more != 'enabled' %}
         <p class="archive__item-excerpt" itemprop="description">
