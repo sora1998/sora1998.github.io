@@ -26,120 +26,92 @@ author_profile: true
   }
 </style>
 
+{%- comment -%}
+Sort all publications by date, newest first
+{%- endcomment -%}
 {% assign pubs_all = site.publications | sort: "date" | reverse %}
 
+{%- comment -%}
+Helper: render a single publication line with robust authors handling.
+- authors can be:
+  1) string: "A, B, C"
+  2) array of strings: ["A","B","C"]
+  3) array of objects: [{name:"A"}, ...]
+{%- endcomment -%}
+{% capture render_pub %}
+{% raw %}
+  {% assign authors_display = "" %}
+  {% if p.authors %}
+    {% assign aj = p.authors | jsonify %}
+    {% if aj | slice: 0, 1 == "[" %}
+      {% assign first_item = p.authors[0] %}
+      {% if first_item.name %}
+        {% capture authors_display %}
+          {% for a in p.authors %}
+            {{ a.name }}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        {% endcapture %}
+      {% else %}
+        {% assign authors_display = p.authors | join: ", " %}
+      {% endif %}
+    {% else %}
+      {% assign authors_display = p.authors %}
+    {% endif %}
+  {% endif %}
+
+  <li class="pub-item">
+    <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
+    <span class="pub-meta">
+      {% if p.venue %}{{ p.venue }}{% endif %}
+      {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
+      {% if authors_display and authors_display != "" %}
+        <br/>{{ authors_display }}
+      {% endif %}
+    </span>
+  </li>
+{% endraw %}
+{% endcapture %}
+
+{%- comment -%}
+If categories are configured, render grouped; else render flat list.
+{%- endcomment -%}
 {% if site.publication_category %}
-  {% for category in site.publication_category %}
-    {% assign group_key = category[0] %}
-    {% assign group_title = category[1].title %}
-    {% assign group_items = pubs_all | where: "category", group_key %}
+  {%- for category in site.publication_category -%}
+    {%- assign group_key = category[0] -%}
+    {%- assign group_title = category[1].title -%}
+    {%- assign group_items = pubs_all | where: "category", group_key -%}
     {% if group_items.size > 0 %}
       <h2>{{ group_title }}</h2>
       <hr/>
       <ul class="pub-list">
-        {% for p in group_items %}
-          {% assign authors_display = "" %}
-          {% if p.authors %}
-            {% assign aj = p.authors | jsonify %}
-            {% if aj contains '[' and aj contains ']' %}
-              {% assign first_item = p.authors[0] %}
-              {% if first_item.name %}
-                {% capture authors_display %}
-                  {% for a in p.authors %}
-                    {{ a.name }}{% unless forloop.last %}, {% endunless %}
-                  {% endfor %}
-                {% endcapture %}
-              {% else %}
-                {% assign authors_display = p.authors | join: ", " %}
-              {% endif %}
-            {% else %}
-              {% assign authors_display = p.authors %}
-            {% endif %}
-          {% endif %}
-          <li class="pub-item">
-            <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
-            <span class="pub-meta">
-              {% if p.venue %}{{ p.venue }}{% endif %}
-              {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
-              {% if authors_display and authors_display != "" %}
-                <br/>{{ authors_display }}
-              {% endif %}
-            </span>
-          </li>
-        {% endfor %}
+        {%- for p in group_items -%}
+          {{ render_pub | replace: '{% raw %}', '' | replace: '{% endraw %}', '' }}
+        {%- endfor -%}
       </ul>
     {% endif %}
-  {% endfor %}
+  {%- endfor -%}
 
-  {% assign uncats = pubs_all | where_exp: "pp","pp.category == nil or pp.category == ''" %}
+  {%- comment -%} Uncategorized fallback without using where_exp (GitHub Pages-safe) {%- endcomment -%}
+  {%- assign uncats = "" | split: "" -%}
+  {%- for p in pubs_all -%}
+    {%- if p.category == nil or p.category == "" -%}
+      {%- assign uncats = uncats | push: p -%}
+    {%- endif -%}
+  {%- endfor -%}
   {% if uncats.size > 0 %}
     <h2>Others</h2>
     <hr/>
     <ul class="pub-list">
-      {% for p in uncats %}
-        {% assign authors_display = "" %}
-        {% if p.authors %}
-          {% assign aj = p.authors | jsonify %}
-          {% if aj contains '[' and aj contains ']' %}
-            {% assign first_item = p.authors[0] %}
-            {% if first_item.name %}
-              {% capture authors_display %}
-                {% for a in p.authors %}
-                  {{ a.name }}{% unless forloop.last %}, {% endunless %}
-                {% endfor %}
-              {% endcapture %}
-            {% else %}
-              {% assign authors_display = p.authors | join: ", " %}
-            {% endif %}
-          {% else %}
-            {% assign authors_display = p.authors %}
-          {% endif %}
-        {% endif %}
-        <li class="pub-item">
-          <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
-          <span class="pub-meta">
-            {% if p.venue %}{{ p.venue }}{% endif %}
-            {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
-            {% if authors_display and authors_display != "" %}
-              <br/>{{ authors_display }}
-            {% endif %}
-          </span>
-        </li>
-      {% endfor %}
+      {%- for p in uncats -%}
+        {{ render_pub | replace: '{% raw %}', '' | replace: '{% endraw %}', '' }}
+      {%- endfor -%}
     </ul>
   {% endif %}
 
 {% else %}
   <ul class="pub-list">
-    {% for p in pubs_all %}
-      {% assign authors_display = "" %}
-      {% if p.authors %}
-        {% assign aj = p.authors | jsonify %}
-        {% if aj contains '[' and aj contains ']' %}
-          {% assign first_item = p.authors[0] %}
-          {% if first_item.name %}
-            {% capture authors_display %}
-              {% for a in p.authors %}
-                {{ a.name }}{% unless forloop.last %}, {% endunless %}
-              {% endfor %}
-            {% endcapture %}
-          {% else %}
-            {% assign authors_display = p.authors | join: ", " %}
-          {% endif %}
-        {% else %}
-          {% assign authors_display = p.authors %}
-        {% endif %}
-      {% endif %}
-      <li class="pub-item">
-        <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
-        <span class="pub-meta">
-          {% if p.venue %}{{ p.venue }}{% endif %}
-          {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
-          {% if authors_display and authors_display != "" %}
-            <br/>{{ authors_display }}
-          {% endif %}
-        </span>
-      </li>
-    {% endfor %}
+    {%- for p in pubs_all -%}
+      {{ render_pub | replace: '{% raw %}', '' | replace: '{% endraw %}', '' }}
+    {%- endfor -%}
   </ul>
 {% endif %}
