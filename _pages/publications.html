@@ -1,110 +1,40 @@
-{%- comment -%}
-  _layouts/publication.html
-  单篇 Publication 页面布局：
-  - 上方显示 标题 / 作者 /  venue / 日期
-  - 正文显示 page.content（含 Abstract 等）
-  - 底部提供 “Previous / Next” 导航（基于 site.publications 集合计算）
-{%- endcomment -%}
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- if site.styles -%}
-    {%- for css in site.styles -%}
-      <link rel="stylesheet" href="{{ css | relative_url }}">
-    {%- endfor -%}
-  {%- endif -%}
-  {%- include head.html -%}
-</head>
-<body class="layout--publication">
-  {%- include header.html -%}
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
 
-  <main id="main" role="main">
-    <article class="page">
-      <header class="page__header">
-        <h1 class="page__title">{{ page.title }}</h1>
+{% if site.author.googlescholar %}
+  <div class="wordwrap">
+    You can also find my articles on
+    <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.
+  </div>
+{% endif %}
 
-        <p class="page__meta">
-          {%- if page.authors -%}
-            <span class="pub-authors">
-              {%- for author in page.authors -%}
-                {{ author }}{%- unless forloop.last -%}, {% endunless -%}
-              {%- endfor -%}
-            </span>
-            {%- if page.venue or page.date -%} · {%- endif -%}
-          {%- endif -%}
+{% include base_path %}
 
-          {%- if page.venue -%}{{ page.venue }}{%- endif -%}
-          {%- if page.date -%} ({{ page.date | date: "%B %d, %Y" }}){%- endif -%}
-        </p>
-
-        {%- assign pdf = page.pdf | default: page.paperurl | default: page.link -%}
-        {%- if pdf or page.code -%}
-          <p class="page__links">
-            {%- if pdf -%}<a href="{{ pdf }}" target="_blank" rel="noopener">PDF</a>{%- endif -%}
-            {%- if pdf and page.code -%} · {%- endif -%}
-            {%- if page.code -%}<a href="{{ page.code }}" target="_blank" rel="noopener">Code</a>{%- endif -%}
-          </p>
-        {%- endif -%}
-      </header>
-
-      <div class="page__content">
-        {{ content }}
-      </div>
-
-      <hr />
-
-      {%- comment -%}
-        计算集合内的 prev/next：
-        1) 取按 date 升序的 publications 数组 pubs
-        2) 找到当前页面在数组中的索引 i
-        3) prev = pubs[i-1]（更早的），next = pubs[i+1]（更晚的）
-        如果你希望“下一条”在视觉上指向时间更近的，可以反转命名。
-      {%- endcomment -%}
-      {%- assign pubs = site.publications | sort: "date" -%}
-      {%- assign current_index = nil -%}
-      {%- for p in pubs -%}
-        {%- if p.url == page.url -%}
-          {%- assign current_index = forloop.index0 -%}
-        {%- endif -%}
-      {%- endfor -%}
-
-      {%- assign prev_pub = nil -%}
-      {%- assign next_pub = nil -%}
-      {%- if current_index -%}
-        {%- if current_index > 0 -%}
-          {%- assign prev_index = current_index | minus: 1 -%}
-          {%- assign prev_pub = pubs[prev_index] -%}
-        {%- endif -%}
-        {%- assign next_index = current_index | plus: 1 -%}
-        {%- if next_index < pubs.size -%}
-          {%- assign next_pub = pubs[next_index] -%}
-        {%- endif -%}
-      {%- endif -%}
-
-      <nav class="page__pager" aria-label="Publication navigation">
-        <ul class="pager">
-          <li class="pager__item pager__item--prev">
-            {%- if prev_pub -%}
-              <a href="{{ prev_pub.url | relative_url }}">&larr; Previous: {{ prev_pub.title }}</a>
-            {%- else -%}
-              <span class="disabled">&larr; Previous</span>
-            {%- endif -%}
-          </li>
-          <li class="pager__item pager__item--next">
-            {%- if next_pub -%}
-              <a href="{{ next_pub.url | relative_url }}">Next: {{ next_pub.title }} &rarr;</a>
-            {%- else -%}
-              <span class="disabled">Next &rarr;</span>
-            {%- endif -%}
-          </li>
-        </ul>
-      </nav>
-    </article>
-  </main>
-
-  {%- include footer.html -%}
-</body>
-</html>
+<!-- If publication_category is defined in _config.yml, render grouped by category -->
+{% if site.publication_category %}
+  {% for category in site.publication_category %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include publication-item.html post=post %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% comment %}
+    No categories defined: render all publications in reverse chronological order.
+    Abstracts are not displayed.
+  {% endcomment %}
+  {% for post in site.publications reversed %}
+    {% include publication-item.html post=post %}
+  {% endfor %}
+{% endif %}
