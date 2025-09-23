@@ -8,7 +8,7 @@ classes: wide
 
 ### About Me
 My name is **Enze Ma**, and I am a Ph.D. student in the [University of Illinois Chicago (UIC)](https://cs.uic.edu/).  
-I am fortunate to be advised by Professor [Philip S. Yu](https://cs.uic.edu/profiles/philip-yu/) in the **[Big Data and Social Computing (BDSC) Lab](https://bdsc.lab.uic.edu/)**.
+I am fortunate to be advised by Professor [Philip S. Yu](https://cs.uic.edu/profiles/philip-yu/) in the **[Big Data and Social Computing (BDSC) Lab](https://bdsc-uic.github.io/people.html)**.
 
 ### Research Interests
 My research focuses on:
