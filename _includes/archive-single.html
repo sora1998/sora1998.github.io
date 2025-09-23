@@ -50,7 +50,14 @@
       {% assign author_line = post.authors | default: post.author %}
       {% if author_line %}
         <p class="pub-authors">
-          {{ author_line | markdownify | strip | remove: '<p>' | remove: '</p>' }}
+          {% if author_line %}
+            {% if author_line.first %}
+              {%- assign formatted_authors = author_line | join: ", " -%}
+            {% else %}
+              {%- assign formatted_authors = author_line -%}
+            {% endif %}
+            <p class="pub-authors">{{ formatted_authors }}</p>
+          {% endif %}
         </p>
       {% endif %}
       {% if post.venue %}
