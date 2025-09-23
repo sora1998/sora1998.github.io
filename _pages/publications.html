@@ -5,17 +5,21 @@ permalink: /publications/
 author_profile: true
 ---
 
-<!-- {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %} -->
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<style>
+  .pub-list { list-style: none; padding-left: 0; }
+  .pub-item { margin: 0 0 0.85rem 0; }
+  .pub-meta { color: #666; font-size: 0.95rem; }
+</style>
+
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% assign pubs_all = site.publications | sort: "date" | reverse %}
+
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
+    <ul class="pub-list">
+    {% for post in pubs_all %}
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
@@ -23,14 +27,50 @@ author_profile: true
         <h2>{{ category[1].title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
-      {% include archive-single.html %}
+      <li class="pub-item">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br/>
+        <span class="pub-meta">
+          {% if post.venue %}{{ post.venue }}{% endif %}
+          {% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+          {% if post.authors %}<br/>{{ post.authors | join: ", " }}{% endif %}
+        </span>
+      </li>
     {% endfor %}
+    </ul>
   {% endfor %}
+
+  {%- comment -%}
+  Fallback: uncategorized items
+  {%- endcomment -%}
+  {% assign uncats = pubs_all | where_exp: "p","p.category == nil or p.category == ''" %}
+  {% if uncats.size > 0 %}
+    <h2>Others</h2><hr />
+    <ul class="pub-list">
+    {% for post in uncats %}
+      <li class="pub-item">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br/>
+        <span class="pub-meta">
+          {% if post.venue %}{{ post.venue }}{% endif %}
+          {% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+          {% if post.authors %}<br/>{{ post.authors | join: ", " }}{% endif %}
+        </span>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
 {% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+  {% assign pubs = site.publications | sort: "date" | reverse %}
+  <ul class="pub-list">
+  {% for post in pubs %}
+    <li class="pub-item">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br/>
+      <span class="pub-meta">
+        {% if post.venue %}{{ post.venue }}{% endif %}
+        {% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+        {% if post.authors %}<br/>{{ post.authors | join: ", " }}{% endif %}
+      </span>
+    </li>
   {% endfor %}
+  </ul>
 {% endif %}
-
-
-
