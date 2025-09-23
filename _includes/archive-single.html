@@ -45,35 +45,25 @@
       </p>
     {% endif %}
 
-    {%- comment -%} Publications: authors + venue/year; no abstract/excerpt {%- endcomment -%}
     {% if post.collection == 'publications' or post.collection == 'publication' %}
-
-      {%- assign author_line = post.authors | default: post.author -%}
+      {% assign author_line = post.authors | default: post.author %}
       {% if author_line %}
         {% if author_line.first %}
-          {%- assign formatted_authors = author_line | join: ", " -%}
+          {% assign formatted_authors = author_line | join: ", " %}
         {% else %}
-          {%- assign formatted_authors = author_line -%}
+          {% assign formatted_authors = author_line %}
         {% endif %}
-        <p class="pub-authors">
-          {{ formatted_authors | markdownify | strip | remove: '<p>' | remove: '</p>' }}
-        </p>
+        <p class="pub-authors">{{ formatted_authors }}</p>
       {% endif %}
-
       {% if post.venue %}
         <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
       {% else %}
         <p>{{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
       {% endif %}
-
     {% elsif post.collection == 'teaching' %}
-      <p>{{ post.type }}, <i>{{ post.venue }}</i>,
-         {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-
+      <p>{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
     {% elsif post.venue %}
-      <p>Published in <i>{{ post.venue }}</i>,
-         {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-
+      <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
     {% elsif post.date %}
       <p class="page__date">
         <strong>
@@ -86,7 +76,6 @@
       </p>
     {% endif %}
 
-    {%- comment -%} Show excerpt only for non-publications {%- endcomment -%}
     {% if post.collection != 'publications' and post.collection != 'publication' %}
       {% if post.excerpt and site.read_more != 'enabled' %}
         <p class="archive__item-excerpt" itemprop="description">
