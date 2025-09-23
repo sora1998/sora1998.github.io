@@ -1,9 +1,4 @@
----
-permalink: /about/
-title: "About me"
-layout: single
-author_profile: true
----
+
 
 My name is **Enze Ma**, and I am a Ph.D. student in the Department of Computer Science at the [University of Illinois Chicago (UIC)](https://cs.uic.edu/).  
 I am fortunate to be advised by [Professor Philip S. Yu](https://cs.uic.edu/profiles/philip-yu/) and I am a member of the **[Big Data and Social Computing (BDSC) Lab](https://bdsc.lab.uic.edu/)**.
