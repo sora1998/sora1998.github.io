@@ -17,17 +17,20 @@ author_profile: true
 {% assign pubs_all = site.publications | sort: "date" | reverse %}
 
 {% comment %}
-Helper: build authors_display for current item p
-- authors: "A, B, C"            -> prints as-is
-- authors: ["A","B","C"]        -> join
-- authors: [{name:"A"},{...}]   -> join .name
-If none, omit authors line (do NOT fallback to citation).
+Helper: normalize authors for current item p.
+- If p.authors is an array:
+    - if array of objects with .name, join names
+    - else join as strings
+- If p.authors is a string, print as-is
+(No fallback to citation to avoid odd truncation.)
 {% endcomment %}
 {% capture _author_block %}
   {% assign authors_display = "" %}
   {% if p.authors %}
-    {% if p.authors.first %}
-      {% if p.authors.first.name %}
+    {% assign aj = p.authors | jsonify %}
+    {% if aj contains '[' and aj contains ']' %}
+      {% assign first_item = p.authors[0] %}
+      {% if first_item.name %}
         {% capture authors_display %}{% for a in p.authors %}{{ a.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
       {% else %}
         {% assign authors_display = p.authors | join: ", " %}
@@ -63,7 +66,6 @@ If none, omit authors line (do NOT fallback to citation).
     {% endif %}
   {% endfor %}
 
-  {% comment %} Fallback group for uncategorized items {% endcomment %}
   {% assign uncats = pubs_all | where_exp: "pp","pp.category == nil or pp.category == ''" %}
   {% if uncats.size > 0 %}
     <h2>Others</h2>
@@ -98,3 +100,5 @@ If none, omit authors line (do NOT fallback to citation).
     {% endfor %}
   </ul>
 {% endif %}
+
+
