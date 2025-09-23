@@ -8,63 +8,91 @@ author_profile: true
 {% include base_path %}
 
 <style>
-  .pub-list { list-style: none; padding-left: 0; }
+  .pub-list { list-style: none; padding-left: 0; margin: 0; }
   .pub-item { margin: 0 0 1rem 0; }
   .pub-title { font-weight: 600; }
-  .pub-meta { color: #555; font-size: 0.95rem; line-height: 1.3; }
+  .pub-meta { color: #555; font-size: 0.95rem; line-height: 1.45; }
 </style>
 
 {% assign pubs_all = site.publications | sort: "date" | reverse %}
+
+{% comment %}
+Helper: build authors_display for current item p
+- authors: "A, B, C"            -> prints as-is
+- authors: ["A","B","C"]        -> join
+- authors: [{name:"A"},{...}]   -> join .name
+If none, omit authors line (do NOT fallback to citation).
+{% endcomment %}
+{% capture _author_block %}
+  {% assign authors_display = "" %}
+  {% if p.authors %}
+    {% if p.authors.first %}
+      {% if p.authors.first.name %}
+        {% capture authors_display %}{% for a in p.authors %}{{ a.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
+      {% else %}
+        {% assign authors_display = p.authors | join: ", " %}
+      {% endif %}
+    {% else %}
+      {% assign authors_display = p.authors %}
+    {% endif %}
+  {% endif %}
+{% endcapture %}
 
 {% if site.publication_category %}
   {% for category in site.publication_category %}
     {% assign group_key = category[0] %}
     {% assign group_title = category[1].title %}
     {% assign group_items = pubs_all | where: "category", group_key %}
+
     {% if group_items.size > 0 %}
       <h2>{{ group_title }}</h2>
       <hr/>
       <ul class="pub-list">
         {% for p in group_items %}
+          {{ _author_block }}
           <li class="pub-item">
             <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
             <span class="pub-meta">
               {% if p.venue %}{{ p.venue }}{% endif %}
               {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
-              <br/>
-              {% if p.authors %}
-                {% if p.authors.first %}
-                  {{ p.authors | join: ", " }}
-                {% else %}
-                  {{ p.authors }}
-                {% endif %}
-              {% elsif p.citation %}
-                {{ p.citation | split: '.' | first }}
-              {% endif %}
+              {% if authors_display and authors_display != "" %}<br/>{{ authors_display }}{% endif %}
             </span>
           </li>
         {% endfor %}
       </ul>
     {% endif %}
   {% endfor %}
+
+  {% comment %} Fallback group for uncategorized items {% endcomment %}
+  {% assign uncats = pubs_all | where_exp: "pp","pp.category == nil or pp.category == ''" %}
+  {% if uncats.size > 0 %}
+    <h2>Others</h2>
+    <hr/>
+    <ul class="pub-list">
+      {% for p in uncats %}
+        {{ _author_block }}
+        <li class="pub-item">
+          <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
+          <span class="pub-meta">
+            {% if p.venue %}{{ p.venue }}{% endif %}
+            {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
+            {% if authors_display and authors_display != "" %}<br/>{{ authors_display }}{% endif %}
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
 {% else %}
   <ul class="pub-list">
     {% for p in pubs_all %}
+      {{ _author_block }}
       <li class="pub-item">
         <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
         <span class="pub-meta">
           {% if p.venue %}{{ p.venue }}{% endif %}
           {% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}
-          <br/>
-          {% if p.authors %}
-            {% if p.authors.first %}
-              {{ p.authors | join: ", " }}
-            {% else %}
-              {{ p.authors }}
-            {% endif %}
-          {% elsif p.citation %}
-            {{ p.citation | split: '.' | first }}
-          {% endif %}
+          {% if authors_display and authors_display != "" %}<br/>{{ authors_display }}{% endif %}
         </span>
       </li>
     {% endfor %}
