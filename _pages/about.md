@@ -1,9 +1,10 @@
 
 ---
-permalink:
-title: "About Me"
 layout: single
+title: "Enze Ma"
+permalink: /
 author_profile: true
+classes: wide
 ---
 
 My name is **Enze Ma**, and I am a Ph.D. student in the [University of Illinois Chicago (UIC)](https://cs.uic.edu/).  
