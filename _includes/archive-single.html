@@ -45,10 +45,12 @@
       </p>
     {% endif %}
 
-    {% if post.collection == 'publications' %}
-      {% if post.authors %}
+    {# Publications block: show authors + venue/year #}
+    {% if post.collection == 'publications' or post.collection == 'publication' %}
+      {% assign author_line = post.authors | default: post.author %}
+      {% if author_line %}
         <p class="pub-authors">
-          {{ post.authors | markdownify | strip | remove: '<p>' | remove: '</p>' }}
+          {{ author_line | markdownify | strip | remove: '<p>' | remove: '</p>' }}
         </p>
       {% endif %}
       {% if post.venue %}
@@ -56,12 +58,15 @@
       {% else %}
         <p>{{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
       {% endif %}
+
     {% elsif post.collection == 'teaching' %}
       <p>{{ post.type }}, <i>{{ post.venue }}</i>,
          {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+
     {% elsif post.venue %}
       <p>Published in <i>{{ post.venue }}</i>,
          {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+
     {% elsif post.date %}
       <p class="page__date">
         <strong>
@@ -74,7 +79,8 @@
       </p>
     {% endif %}
 
-    {% if post.collection != 'publications' %}
+    {# Hide excerpts for publications (both slugs) #}
+    {% if post.collection != 'publications' and post.collection != 'publication' %}
       {% if post.excerpt and site.read_more != 'enabled' %}
         <p class="archive__item-excerpt" itemprop="description">
           {{ post.excerpt | markdownify }}
