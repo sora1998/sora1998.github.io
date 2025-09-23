@@ -17,29 +17,12 @@ author_profile: true
 {% assign pubs_all = site.publications | sort: "date" | reverse %}
 
 {% comment %}
-Helper: normalize authors for current item p.
-- If p.authors is an array:
-    - if array of objects with .name, join names
-    - else join as strings
-- If p.authors is a string, print as-is
-(No fallback to citation to avoid odd truncation.)
+Inline author normalization per item 'p':
+- authors: "A, B"                -> print as-is
+- authors: ["A","B"]             -> join
+- authors: [{name:"A"},{...}]    -> join .name
+(no fallback to 'citation' to avoid weird truncation)
 {% endcomment %}
-{% capture _author_block %}
-  {% assign authors_display = "" %}
-  {% if p.authors %}
-    {% assign aj = p.authors | jsonify %}
-    {% if aj contains '[' and aj contains ']' %}
-      {% assign first_item = p.authors[0] %}
-      {% if first_item.name %}
-        {% capture authors_display %}{% for a in p.authors %}{{ a.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
-      {% else %}
-        {% assign authors_display = p.authors | join: ", " %}
-      {% endif %}
-    {% else %}
-      {% assign authors_display = p.authors %}
-    {% endif %}
-  {% endif %}
-{% endcapture %}
 
 {% if site.publication_category %}
   {% for category in site.publication_category %}
@@ -52,7 +35,22 @@ Helper: normalize authors for current item p.
       <hr/>
       <ul class="pub-list">
         {% for p in group_items %}
-          {{ _author_block }}
+
+          {% assign authors_display = "" %}
+          {% if p.authors %}
+            {% assign aj = p.authors | jsonify %}
+            {% if aj contains '[' and aj contains ']' %}
+              {% assign first_item = p.authors[0] %}
+              {% if first_item.name %}
+                {% capture authors_display %}{% for a in p.authors %}{{ a.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
+              {% else %}
+                {% assign authors_display = p.authors | join: ", " %}
+              {% endif %}
+            {% else %}
+              {% assign authors_display = p.authors %}
+            {% endif %}
+          {% endif %}
+
           <li class="pub-item">
             <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
             <span class="pub-meta">
@@ -72,7 +70,22 @@ Helper: normalize authors for current item p.
     <hr/>
     <ul class="pub-list">
       {% for p in uncats %}
-        {{ _author_block }}
+
+        {% assign authors_display = "" %}
+        {% if p.authors %}
+          {% assign aj = p.authors | jsonify %}
+          {% if aj contains '[' and aj contains ']' %}
+            {% assign first_item = p.authors[0] %}
+            {% if first_item.name %}
+              {% capture authors_display %}{% for a in p.authors %}{{ a.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
+            {% else %}
+              {% assign authors_display = p.authors | join: ", " %}
+            {% endif %}
+          {% else %}
+            {% assign authors_display = p.authors %}
+          {% endif %}
+        {% endif %}
+
         <li class="pub-item">
           <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
           <span class="pub-meta">
@@ -88,7 +101,22 @@ Helper: normalize authors for current item p.
 {% else %}
   <ul class="pub-list">
     {% for p in pubs_all %}
-      {{ _author_block }}
+
+      {% assign authors_display = "" %}
+      {% if p.authors %}
+        {% assign aj = p.authors | jsonify %}
+        {% if aj contains '[' and aj contains ']' %}
+          {% assign first_item = p.authors[0] %}
+          {% if first_item.name %}
+            {% capture authors_display %}{% for a in p.authors %}{{ a.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
+          {% else %}
+            {% assign authors_display = p.authors | join: ", " %}
+          {% endif %}
+        {% else %}
+          {% assign authors_display = p.authors %}
+        {% endif %}
+      {% endif %}
+
       <li class="pub-item">
         <a class="pub-title" href="{{ p.url | relative_url }}">{{ p.title }}</a><br/>
         <span class="pub-meta">
@@ -100,5 +128,3 @@ Helper: normalize authors for current item p.
     {% endfor %}
   </ul>
 {% endif %}
-
-
