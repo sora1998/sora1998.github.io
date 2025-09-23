@@ -42,9 +42,11 @@
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
+    {%- comment -%} teaching as before {%- endcomment -%}
     {% if post.collection == 'teaching' %}
       <p>{{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
 
+    {%- comment -%} publications/publication: authors  + two spaces + venue,year in ONE <p> {%- endcomment -%}
     {% elsif post.collection == 'publications' or post.collection == 'publication' %}
       {% assign author_line = post.authors | default: post.author %}
       {% if author_line %}
@@ -62,9 +64,9 @@
         {% endif %}
       {% endif %}
 
+    {%- comment -%} other content types keep original venue/date lines {%- endcomment -%}
     {% elsif post.venue %}
       <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
-
     {% elsif post.date %}
       <p class="page__date">
         <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong>
@@ -74,6 +76,7 @@
       </p>
     {% endif %}
 
+    {%- comment -%} DO NOT show excerpt/abstract for publications {%- endcomment -%}
     {% if post.collection != 'publications' and post.collection != 'publication' %}
       {% if post.excerpt and site.read_more != 'enabled' %}
         <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
@@ -85,6 +88,8 @@
         </p>
       {% endif %}
     {% endif %}
+
+    {# removed all citation/download blocks #}
 
   </article>
 </div>
