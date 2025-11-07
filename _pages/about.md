@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Enze Ma"
+title: "Welcom!"
 permalink: /
 author_profile: true
 classes: wide
