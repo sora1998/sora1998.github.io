@@ -1,1 +1,36 @@
+.compact-pubs {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
 
+.compact-pubs .small-title {
+  font-size: 1.05rem;
+  margin: 0 0 0.25em 0;
+}
+
+.compact-pubs .small-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.15em;
+  margin-bottom: 0;
+}
+
+.compact-pubs .pub-divider {
+  border: 0;
+  border-top: 1px solid #e3e3e3;
+  margin: 0.6em 0 0.9em;
+}
+
+.compact-pubs .pub-header {
+  margin-bottom: 0.3em;
+}
+
+.compact-pubs .small-foot {
+  font-size: 0.85rem;
+  margin-top: 0.8em;
+}
+
+.compact-pubs .page__content p {
+  margin-top: 0.4em;
+  margin-bottom: 0.6em;
+}
