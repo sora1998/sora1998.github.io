@@ -20,15 +20,14 @@ I am broadly interested in building AI systems that can **perceive, reason, and 
 
 ## Research Interests
 
-My research sits at the intersection of **large language models**, **AI agents**, and **multimodal learning**, with a growing interest in **world models**, **LLM reasoning**, and **AI for science**. Concretely, I work on agentic and multimodal LLMs — building systems that interact with rich, structured environments (video, code, scientific data) and produce explainable, verifiable, and useful outputs. I am especially drawn to problems where **reasoning, interaction, and grounding** all matter at once: the model must think carefully, act in the world, and stay faithful to the evidence in front of it.
+I'm broadly interested in **artificial intelligence** — how we build systems that can understand the world, reason about it, and interact with it in meaningful ways. My current work revolves around **large language models**, **AI agents**, and **multimodal learning**, but I think of these as different angles on a bigger question: what does it take for machines to genuinely understand and engage with their environment? I'm drawn to research that combines depth, generality, and real-world impact.
 
 <div class="research-tags">
+  <span class="tag">Artificial Intelligence</span>
   <span class="tag">Large Language Models</span>
   <span class="tag">AI Agents</span>
   <span class="tag">Multimodal Learning</span>
-  <span class="tag">World Models</span>
-  <span class="tag">LLM Reasoning</span>
-  <span class="tag">AI for Science</span>
+  <span class="tag">Reasoning</span>
 </div>
 
 ---
@@ -43,7 +42,7 @@ My research sits at the intersection of **large language models**, **AI agents**
   </li>
   <li>
     <strong>Research Intern</strong> — UC San Diego
-    <span class="time">2023 – 2024</span>
+    <span class="time">2024 – 2025</span>
     <div class="sub">Advised by Prof. Zhiting Hu</div>
   </li>
   <li>
