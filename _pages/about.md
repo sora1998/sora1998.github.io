@@ -33,18 +33,6 @@ My research sits at the intersection of **large language models**, **AI agents**
 
 ---
 
-## News
-
-<ul class="news-list">
-  <li><span class="news-date">Feb 2026</span> New preprint <em>CellMaster</em> on collaborative LLM-based cell type annotation is out on arXiv.</li>
-  <li><span class="news-date">Nov 2025</span> Our world model project <em>Pan</em> is now on arXiv — interactable, long-horizon world simulation.</li>
-  <li><span class="news-date">Sep 2025</span> <em>scPilot</em> accepted to <strong>NeurIPS 2025</strong> as a Poster.</li>
-  <li><span class="news-date">Jul 2025</span> <em>CReLeRI</em> accepted to <strong>ACM MM 2025</strong> (Demo / Video Track).</li>
-  <li><span class="news-date">Aug 2024</span> Started my Ph.D. journey at UIC.</li>
-</ul>
-
----
-
 ## Education & Experience
 
 <ul class="timeline">
