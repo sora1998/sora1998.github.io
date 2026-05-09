@@ -20,6 +20,8 @@ I am broadly interested in building AI systems that can **perceive, reason, and 
 
 ## Research Interests
 
+My research sits at the intersection of **large language models**, **AI agents**, and **multimodal learning**, with a growing interest in **world models**, **LLM reasoning**, and **AI for science**. Concretely, I work on agentic and multimodal LLMs — building systems that interact with rich, structured environments (video, code, scientific data) and produce explainable, verifiable, and useful outputs. I am especially drawn to problems where **reasoning, interaction, and grounding** all matter at once: the model must think carefully, act in the world, and stay faithful to the evidence in front of it.
+
 <div class="research-tags">
   <span class="tag">Large Language Models</span>
   <span class="tag">AI Agents</span>
@@ -28,8 +30,6 @@ I am broadly interested in building AI systems that can **perceive, reason, and 
   <span class="tag">LLM Reasoning</span>
   <span class="tag">AI for Science</span>
 </div>
-
-My current research focuses on **agentic and multimodal LLMs** — how language models can interact with rich, structured environments (video, code, scientific data) to produce explainable, verifiable, and useful outputs. I am particularly drawn to problems where reasoning, interaction, and grounding all matter at once.
 
 ---
 
