@@ -12,8 +12,6 @@ classes: wide
 
 I'm a Ph.D. student in Computer Science at the [University of Illinois Chicago (UIC)](https://cs.uic.edu/), advised by Professor [Philip S. Yu](https://cs.uic.edu/profiles/philip-yu/) in the **[Big Data and Social Computing (BDSC) Lab](https://bdsc-uic.github.io/people.html)**. Previously, I earned my **B.S. and M.S. in Computer Science** at **UC San Diego**, where I worked closely with [Zhiting Hu](https://zhiting.ucsd.edu/).
 
-I am broadly interested in building AI systems that can **perceive, reason, and act** — bridging language, perception, and the physical/biological world.
-
 </div>
 
 ---
