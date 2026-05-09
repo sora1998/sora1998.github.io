@@ -20,14 +20,16 @@ I am broadly interested in building AI systems that can **perceive, reason, and 
 
 ## Research Interests
 
-I'm broadly interested in **artificial intelligence** — how we build systems that can understand the world, reason about it, and interact with it in meaningful ways. My current work revolves around **large language models**, **AI agents**, and **multimodal learning**, but I think of these as different angles on a bigger question: what does it take for machines to genuinely understand and engage with their environment? I'm drawn to research that combines depth, generality, and real-world impact.
+I'm broadly interested in **artificial intelligence** — how we build systems that can understand the world, reason about it, and interact with it in meaningful ways. I'm interested in **large language models**, **AI agents**, and **multimodal learning** as different angles on a bigger question: what does it take for machines to genuinely understand and engage with their environment?
+
+Recently, I've been going deeper into **memory** — I'm especially interested in how AI can **remember its users and the world**: building up a lasting picture of who someone is, what they care about, and how the world around them works, so that interactions become more personal, coherent, and useful over time.
 
 <div class="research-tags">
   <span class="tag">Artificial Intelligence</span>
   <span class="tag">Large Language Models</span>
   <span class="tag">AI Agents</span>
   <span class="tag">Multimodal Learning</span>
-  <span class="tag">Reasoning</span>
+  <span class="tag">Memory</span>
 </div>
 
 ---
