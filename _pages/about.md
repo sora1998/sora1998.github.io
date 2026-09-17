@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "AI, Memory & Reasoning"
-description: "Enze Ma is a Computer Science Ph.D. student at UIC researching long-term memory for AI agents, trustworthy reasoning, and multimodal intelligence."
+description: "Enze Ma is a Computer Science Ph.D. student at UIC researching AI agents, memory, skills, reasoning, and multimodal intelligence."
 permalink: /
 ---
 <section class="hero" id="about" aria-labelledby="intro-title">
@@ -13,7 +13,7 @@ permalink: /
       <p>I'm a Ph.D. student at <a href="https://cs.uic.edu/">UIC</a>, advised by <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a> in the <a href="https://bdsc-uic.github.io/people.html">Big Data and Social Computing Lab</a>.</p>
       <p>Previously, I earned my B.S. and M.S. in Computer Science at <strong>UC San Diego</strong>, where I worked with <a href="https://zhiting.ucsd.edu/">Prof. Zhiting Hu</a>.</p>
     </div>
-    <p class="current-focus"><span aria-hidden="true">↳</span> Currently exploring how AI remembers its users and the world.</p>
+    <p class="current-focus"><span aria-hidden="true">↳</span> Exploring how AI agents use memory and skills to understand and interact with the world, and help people accomplish tasks.</p>
     <div class="social-links" aria-label="Contact and academic profiles">
       <a class="button button-primary" href="mailto:{{ site.author.email }}">Say hello <span aria-hidden="true">↗</span></a>
       <a href="{{ site.author.googlescholar }}">Scholar <span aria-hidden="true">↗</span></a>
@@ -33,11 +33,11 @@ permalink: /
 </section>
 
 <section class="section research-section" id="research" aria-labelledby="research-title">
-  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">AI agents, memory, <br>and reasoning.</h2></div>
+  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">AI agents: <br>memory, skills, and reasoning.</h2></div>
   <div class="research-content">
-    <p class="section-intro">I study how AI agents remember, reason, and interact with their environment. My work spans long-term agent memory, language-model reasoning, and multimodal learning, with applications in scientific discovery.</p>
+    <p class="section-intro">I study how AI agents understand the world, learn from experience, and act to help people accomplish tasks. My work spans long-term memory, skill learning and use, language-model reasoning, and multimodal learning, with applications in scientific discovery.</p>
     <div class="research-grid">
-      <div class="research-topic"><span class="topic-number">01</span><h3>Memory & agents</h3><p>Lasting memories of users and the world that make AI more personal and useful over time.</p></div>
+      <div class="research-topic"><span class="topic-number">01</span><h3>Memory & skills</h3><p>Remembering users and the world, learning reusable skills, and applying them to new tasks.</p></div>
       <div class="research-topic"><span class="topic-number">02</span><h3>Reasoning & evaluation</h3><p>Understanding how language models reason, update beliefs, and learn from feedback.</p></div>
       <div class="research-topic"><span class="topic-number">03</span><h3>Worlds & discovery</h3><p>Multimodal world models and AI systems that help make sense of complex scientific data.</p></div>
     </div>
