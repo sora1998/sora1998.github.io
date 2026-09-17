@@ -1,6 +1,6 @@
 # Enze Ma — academic website
 
-Personal research website at **https://sora1998.github.io**, built with Jekyll and hosted on GitHub Pages. The main pages use a custom responsive layout with a warm neutral palette and forest-green accents. The repository retains the original [Academic Pages](https://github.com/academicpages/academicpages.github.io) template and its MIT license.
+Personal research website at **https://sora1998.github.io**, built with Jekyll and hosted on GitHub Pages. The main pages use a custom responsive layout with a cool white palette with navy and blue accents inspired by UC San Diego. The repository retains the original [Academic Pages](https://github.com/academicpages/academicpages.github.io) template and its MIT license.
 
 ## Update the content
 
