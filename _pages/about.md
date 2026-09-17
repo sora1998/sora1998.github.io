@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "AI, Memory & Reasoning"
+title: "AI Agents"
 description: "Enze Ma is a Computer Science Ph.D. student at UIC researching AI agents, memory, skills, reasoning, and multimodal intelligence."
 permalink: /
 ---
@@ -13,7 +13,7 @@ permalink: /
       <p>I'm a Ph.D. student at <a href="https://cs.uic.edu/">UIC</a>, advised by <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a> in the <a href="https://bdsc-uic.github.io/people.html">Big Data and Social Computing Lab</a>.</p>
       <p>Previously, I earned my B.S. and M.S. in Computer Science at <strong>UC San Diego</strong>, where I worked with <a href="https://zhiting.ucsd.edu/">Prof. Zhiting Hu</a>.</p>
     </div>
-    <p class="current-focus"><span aria-hidden="true">↳</span> Exploring how AI agents use memory and skills to understand and interact with the world, and help people accomplish tasks.</p>
+    <p class="current-focus"><span aria-hidden="true">↳</span> Exploring how AI agents understand and interact with the world to help people accomplish tasks.</p>
     <div class="social-links" aria-label="Contact and academic profiles">
       <a class="button button-primary" href="mailto:{{ site.author.email }}">Say hello <span aria-hidden="true">↗</span></a>
       <a href="{{ site.author.googlescholar }}">Scholar <span aria-hidden="true">↗</span></a>
@@ -33,7 +33,7 @@ permalink: /
 </section>
 
 <section class="section research-section" id="research" aria-labelledby="research-title">
-  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">AI agents: <br>memory, skills, and reasoning.</h2></div>
+  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">AI Agents</h2></div>
   <div class="research-content">
     <p class="section-intro">I study how AI agents understand the world, learn from experience, and act to help people accomplish tasks. My work spans long-term memory, skill learning and use, language-model reasoning, and multimodal learning, with applications in scientific discovery.</p>
     <div class="research-grid">
