@@ -1,0 +1,15 @@
+<article class="paper" data-category="{{ include.paper.category }}" data-topic="{{ include.paper.topic | escape }}">
+  <div class="paper-side"><span class="paper-year">{{ include.paper.date | date: '%Y' }}</span><span class="paper-kind">{% if include.paper.category == 'conferences' %}Conference{% else %}Preprint{% endif %}</span></div>
+  <div class="paper-body">
+    <p class="paper-venue">{{ include.paper.venue | escape }}</p>
+    <h3><a href="{{ include.paper.url | relative_url }}">{{ include.paper.title | escape }}</a></h3>
+    <p class="paper-authors">{% for author in include.paper.authors %}{% if author == 'Enze Ma' %}<strong>{{ author }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+    {% if include.paper.summary %}<p class="paper-summary">{{ include.paper.summary | escape }}</p>{% endif %}
+    <div class="paper-links">
+      {% if include.paper.paperurl %}<a href="{{ include.paper.paperurl }}">Paper <span aria-hidden="true">↗</span><span class="sr-only">: {{ include.paper.short_title | default: include.paper.title }}</span></a>{% endif %}
+      {% if include.paper.codeurl %}<a href="{{ include.paper.codeurl }}">Code <span aria-hidden="true">↗</span><span class="sr-only">: {{ include.paper.short_title | default: include.paper.title }}</span></a>{% endif %}
+      {% if include.paper.projecturl %}<a href="{{ include.paper.projecturl }}">Project <span aria-hidden="true">↗</span><span class="sr-only">: {{ include.paper.short_title | default: include.paper.title }}</span></a>{% endif %}
+      <a class="paper-details" href="{{ include.paper.url | relative_url }}">Details <span aria-hidden="true">→</span><span class="sr-only">: {{ include.paper.short_title | default: include.paper.title }}</span></a>
+    </div>
+  </div>
+</article>

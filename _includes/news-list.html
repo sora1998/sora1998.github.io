@@ -1,0 +1,9 @@
+<ol class="news-list">
+  {% assign updates = site.data.news | sort: 'date' | reverse %}
+  {% for item in updates limit: include.limit %}
+  <li class="news-item">
+    <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>
+    <div class="news-copy"><span class="news-label">{{ item.label | escape }}</span>{{ item.text | markdownify }}{% if item.url %}<a class="news-source" href="{{ item.url }}">Read more <span aria-hidden="true">↗</span><span class="sr-only"> about this {{ item.date | date: '%B %Y' }} update</span></a>{% endif %}</div>
+  </li>
+  {% endfor %}
+</ol>

@@ -1,0 +1,66 @@
+# Add a new entry at the top to publish an update; no template changes are needed.
+# Keep dates quoted (YYYY-MM-DD), use Markdown in text, and link the source in url.
+# Dates below mark paper releases (arXiv, the authors' repository, or OpenReview),
+# not inferred acceptance dates. Later acceptance updates are stated explicitly.
+
+- date: "2026-08-27"
+  label: Publication
+  text: >-
+    **Sycophancy Suppression Can Impair Rational Updating** is now on arXiv,
+    accepted to **EMNLP 2026 Findings**. We study how to reduce sycophancy while
+    preserving a model's ability to learn from useful feedback.
+  url: "https://arxiv.org/abs/2608.26511"
+
+- date: "2026-06-23"
+  label: Preprint
+  text: >-
+    Introducing **MEMPROBE**, our benchmark for measuring what AI agents
+    actually remember about their users across interactions.
+  url: "https://arxiv.org/abs/2606.24595"
+
+# The survey PDF was first uploaded in repository commit 7ebf96f5b20939526df02b0309118b66becc8317.
+- date: "2026-06-12"
+  label: Survey
+  text: >-
+    Our survey, **The Landscape of Agentic Time Series Systems**, is available,
+    covering system architectures, reliability, and open research directions.
+  url: "https://github.com/TROUBADOUR000/Awesome-Agentic-Time-Series"
+
+- date: "2026-05-21"
+  label: Preprint
+  text: >-
+    **ARC-STAR** is on arXiv. We develop auditable corrections for PDE foundation
+    models, focusing computation on regions that need refinement.
+  url: "https://arxiv.org/abs/2605.22222"
+
+# COLM acceptance was announced in July 2026: https://exlaw.github.io/#news
+- date: "2026-04-01"
+  label: Publication
+  text: >-
+    **Locally Confident, Globally Stuck** is on arXiv, studying quality versus
+    exploration in diffusion language models. Update: accepted to **COLM 2026**
+    in July.
+  url: "https://arxiv.org/abs/2604.00375"
+
+- date: "2026-02-12"
+  label: Preprint
+  text: >-
+    **CellMaster** is now on arXiv: an AI agent for interpretable cell type
+    annotation, with support for collaborative human refinement.
+  url: "https://arxiv.org/abs/2602.13346"
+
+# This marks the original release; v3 retains the original title and author list.
+- date: "2025-11-12"
+  label: Preprint
+  text: >-
+    The original **PAN** preprint is released: a world model for interactive,
+    long-horizon simulation guided by natural language actions.
+  url: "https://arxiv.org/abs/2511.09057v3"
+
+# OpenReview lists 18 September 2025 as the publication date.
+- date: "2025-09-18"
+  label: Publication
+  text: >-
+    **scPilot** is a **NeurIPS 2025 poster**. Our framework brings LLM reasoning
+    to single-cell analysis, supported by the scBench evaluation suite.
+  url: "https://openreview.net/forum?id=Vzi96rTe4w"

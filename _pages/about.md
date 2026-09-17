@@ -1,73 +1,65 @@
 ---
-layout: single
-title: "Welcome!"
+layout: academic
+title: "AI, Memory & Reasoning"
+description: "Enze Ma is a Computer Science Ph.D. student at UIC researching long-term memory for AI agents, trustworthy reasoning, and multimodal intelligence."
 permalink: /
-author_profile: true
-classes: wide
 ---
+<section class="hero" id="about" aria-labelledby="intro-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Ph.D. student · Computer Science</p>
+    <h1 id="intro-title">Enze Ma<span class="name-period">.</span></h1>
+    <p class="hero-affiliation">University of Illinois Chicago</p>
+    <div class="intro-text">
+      <p>I'm a Ph.D. student at <a href="https://cs.uic.edu/">UIC</a>, advised by <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a> in the <a href="https://bdsc-uic.github.io/people.html">Big Data and Social Computing Lab</a>.</p>
+      <p>Previously, I earned my B.S. and M.S. in Computer Science at <strong>UC San Diego</strong>, where I worked with <a href="https://zhiting.ucsd.edu/">Prof. Zhiting Hu</a>.</p>
+    </div>
+    <p class="current-focus"><span aria-hidden="true">↳</span> Currently exploring how AI remembers its users and the world.</p>
+    <div class="social-links" aria-label="Contact and academic profiles">
+      <a class="button button-primary" href="mailto:{{ site.author.email }}">Say hello <span aria-hidden="true">↗</span></a>
+      <a href="{{ site.author.googlescholar }}">Scholar <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="{{ site.author.orcid }}">ORCID <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <figure class="portrait">
+    <div class="portrait-frame"><img src="{{ '/my_pho_v2.jpg' | relative_url }}" alt="Enze Ma with a city skyline at sunset" width="864" height="1184" fetchpriority="high"></div>
+    <figcaption><span class="portrait-caption-line" aria-hidden="true"></span> Based in Chicago, Illinois <span aria-hidden="true">↗</span></figcaption>
+  </figure>
+</section>
 
-<div class="home-intro" markdown="1">
+<section class="section news-section" id="news" aria-labelledby="news-title">
+  <div class="section-heading"><p class="eyebrow">01 / Latest updates</p><h2 id="news-title">News<span class="name-period">.</span></h2><a class="text-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a></div>
+  {% include news-list.html limit=5 %}
+</section>
 
-## Hi there, I'm Enze 👋
+<section class="section research-section" id="research" aria-labelledby="research-title">
+  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">Memory, reasoning, <br>and the world in between.</h2></div>
+  <div class="research-content">
+    <p class="section-intro">I study how AI systems understand, remember, and interact with their environment. My work spans long-term agent memory, language-model reasoning, and multimodal learning, with applications in scientific discovery.</p>
+    <div class="research-grid">
+      <div class="research-topic"><span class="topic-number">01</span><h3>Memory & agents</h3><p>Lasting memories of users and the world that make AI more personal and useful over time.</p></div>
+      <div class="research-topic"><span class="topic-number">02</span><h3>Reasoning & evaluation</h3><p>Understanding how language models reason, update beliefs, and learn from feedback.</p></div>
+      <div class="research-topic"><span class="topic-number">03</span><h3>Worlds & discovery</h3><p>Multimodal world models and AI systems that help make sense of complex scientific data.</p></div>
+    </div>
+  </div>
+</section>
 
-I'm a Ph.D. student in Computer Science at the [University of Illinois Chicago (UIC)](https://cs.uic.edu/), advised by Professor [Philip S. Yu](https://cs.uic.edu/profiles/philip-yu/) in the **[Big Data and Social Computing (BDSC) Lab](https://bdsc-uic.github.io/people.html)**. Previously, I earned my **B.S. and M.S. in Computer Science** at **UC San Diego**, where I worked closely with [Zhiting Hu](https://zhiting.ucsd.edu/).
+<section class="section publications-section" id="publications" aria-labelledby="papers-title">
+  <div class="section-topline"><div><p class="eyebrow">03 / Selected work</p><h2 id="papers-title">Recent publications</h2></div><a class="text-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a></div>
+  <div class="paper-list">
+    {% assign selected_papers = site.publications | where: 'selected', true | sort: 'date' | reverse %}
+    {% for paper in selected_papers limit:4 %}{% include paper-card.html paper=paper %}{% endfor %}
+  </div>
+</section>
 
-</div>
+<section class="section experience-section" id="experience" aria-labelledby="experience-title">
+  <div class="section-heading"><p class="eyebrow">04 / The journey</p><h2 id="experience-title">Education <br>& experience</h2></div>
+  <ol class="experience-list">
+    <li><span class="experience-date">2024 — Present</span><div><h3>University of Illinois Chicago</h3><p>Ph.D. in Computer Science</p><span class="experience-note">Advisor: Prof. Philip S. Yu · BDSC Lab</span></div><span class="experience-tag">Research</span></li>
+    <li><span class="experience-date">2024 — 2025</span><div><h3>University of California San Diego</h3><p>Research Intern</p><span class="experience-note">Advisor: Prof. Zhiting Hu</span></div></li>
+    <li><span class="experience-date">2022 — 2024</span><div><h3>University of California San Diego</h3><p>M.S. in Computer Science</p></div></li>
+    <li><span class="experience-date">2018 — 2022</span><div><h3>University of California San Diego</h3><p>B.S. in Computer Science</p></div></li>
+  </ol>
+</section>
 
----
-
-## Research Interests
-
-I'm broadly interested in **artificial intelligence** — how we build systems that can understand the world, reason about it, and interact with it in meaningful ways. I'm interested in **large language models**, **AI agents**, and **multimodal learning** as different angles on a bigger question: what does it take for machines to genuinely understand and engage with their environment?
-
-Recently, I've been going deeper into **memory** — I'm especially interested in how AI can **remember its users and the world**: building up a lasting picture of who someone is, what they care about, and how the world around them works, so that interactions become more personal, coherent, and useful over time.
-
-<div class="research-tags">
-  <span class="tag">Artificial Intelligence</span>
-  <span class="tag">Large Language Models</span>
-  <span class="tag">AI Agents</span>
-  <span class="tag">Multimodal Learning</span>
-  <span class="tag">Memory</span>
-</div>
-
----
-
-## Education & Experience
-
-<ul class="timeline">
-  <li>
-    <strong>Ph.D. in Computer Science</strong> — University of Illinois Chicago
-    <span class="time">2024 – present</span>
-    <div class="sub">Advised by Prof. Philip S. Yu, BDSC Lab</div>
-  </li>
-  <li>
-    <strong>Research Intern</strong> — UC San Diego
-    <span class="time">2024 – 2025</span>
-    <div class="sub">Advised by Prof. Zhiting Hu</div>
-  </li>
-  <li>
-    <strong>M.S. in Computer Science</strong> — UC San Diego
-    <span class="time">2022 – 2024</span>
-  </li>
-  <li>
-    <strong>B.S. in Computer Science</strong> — UC San Diego
-    <span class="time">2018 – 2022</span>
-  </li>
-</ul>
-
----
-
-## Selected Publications
-
-A full list is available on the [Publications](/publications/) page and on [Google Scholar](https://scholar.google.com/citations?user=3g_x2R8AAAAJ&hl=en). Below are a few selected recent works:
-
-- **Pan: A World Model for General, Interactable, and Long-Horizon World Simulation.** *arXiv 2025.* [[arXiv]](https://arxiv.org/abs/2511.09057)
-- **scPilot: Large Language Model Reasoning Toward Automated Single-Cell Analysis and Discovery.** *NeurIPS 2025.* [[PDF]](https://openreview.net/pdf?id=Vzi96rTe4w)
-- **CReLeRI: Explainable, Concept-centric, Representation, Learning, Reasoning, and Interaction Video Analysis System.** *ACM MM 2025 (Demo).* [[PDF]](https://openreview.net/pdf?id=auaUkmavvm)
-- **CellMaster: Collaborative Cell Type Annotation in Single-Cell Analysis.** *arXiv 2026.* [[arXiv]](https://arxiv.org/abs/2602.13346)
-
----
-
-## Get in Touch
-
-Feel free to reach out via [email](mailto:ema264@uic.edu) — I'm always happy to chat about research, collaborations, or interesting ideas.
+<section class="contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">Let's connect</p><h2 id="contact-title">Good research starts <br>with a conversation.</h2><p>Always happy to talk about research, collaborations, or an interesting idea.</p></div><a class="contact-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></section>

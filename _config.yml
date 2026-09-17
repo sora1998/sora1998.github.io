@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Enze Ma"
 title_separator          : "-"
 name                     : &name "Enze Ma"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Enze Ma — Ph.D. student at UIC researching AI memory, reasoning, and multimodal intelligence."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://sora1998.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,7 +23,7 @@ repository               : "sora1998/sora1998.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "https://github.com/sora1998/sora1998.github.io/blob/master/my_pho_v2.jpg?raw=true"
+  avatar           : "../my_pho_v2.jpg"
   name             : "Enze Ma"
   pronouns         : "he/him" 
   bio              : "Ph.D. Student in Computer Science at the University of Illinois Chicago. B.S. and M.S. in Computer Science from UC San Diego."
@@ -268,7 +268,7 @@ defaults:
       path: ""
       type: publications
     values:
-      layout: single
+      layout: publication
       author_profile: true
       share: false
       comments: false
