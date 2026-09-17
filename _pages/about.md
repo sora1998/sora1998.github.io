@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "AI Research"
-description: "Enze Ma is a Computer Science Ph.D. student at UIC with broad interests in artificial intelligence, particularly AI agents and multimodal large language models."
+description: "Enze Ma is a Computer Science Ph.D. student at UIC studying AI agents, large language models, and multimodal learning to build more capable and adaptable AI systems."
 permalink: /
 ---
 <section class="hero" id="about" aria-labelledby="intro-title">
@@ -35,11 +35,11 @@ permalink: /
 <section class="section research-section" id="research" aria-labelledby="research-title">
   <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">Research Interests</h2></div>
   <div class="research-content">
-    <p class="section-intro">My research interests lie broadly in artificial intelligence, particularly AI agents and multimodal large language models. I'm interested in how these systems learn, reason, and interact with people and the world, and how memory, skills, and world models can support these capabilities.</p>
+    <p class="section-intro">My research spans AI agents, large language models, and multimodal learning, with the goal of building more capable and adaptable AI systems. I am interested in how these systems learn from experience, reason with evidence, and understand and interact with the world.</p>
     <div class="research-grid">
-      <div class="research-topic"><span class="topic-number">01</span><h3>Agents, memory & skills</h3><p>Remembering users and the world, learning reusable skills, and applying them to new tasks.</p></div>
-      <div class="research-topic"><span class="topic-number">02</span><h3>Reasoning & evaluation</h3><p>Understanding how language models reason, update beliefs, and learn from feedback.</p></div>
-      <div class="research-topic"><span class="topic-number">03</span><h3>Multimodal LLMs</h3><p>Connecting language and perception to understand the world, with a broader interest in world models.</p></div>
+      <div class="research-topic"><span class="topic-number">01</span><h3>AI Agents</h3><p>Memory, reusable skills, and learning from experience to help agents generalize across tasks and environments.</p></div>
+      <div class="research-topic"><span class="topic-number">02</span><h3>Large Language Models</h3><p>Understanding and improving how language models reason, explore solutions, and respond to new evidence.</p></div>
+      <div class="research-topic"><span class="topic-number">03</span><h3>Multimodal Learning</h3><p>Connecting language, vision, and other modalities for richer understanding of the world, with an interest in world models.</p></div>
     </div>
   </div>
 </section>

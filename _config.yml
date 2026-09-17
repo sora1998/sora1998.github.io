@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Enze Ma"
 title_separator          : "-"
 name                     : &name "Enze Ma"
-description              : &description "Enze Ma — Ph.D. student at UIC with broad interests in artificial intelligence, particularly AI agents and multimodal large language models."   # Default description for pages without their own description
+description              : &description "Enze Ma — Ph.D. student at UIC studying AI agents, large language models, and multimodal learning to build more capable and adaptable AI systems."   # Default description for pages without their own description
 url                      : https://sora1998.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
