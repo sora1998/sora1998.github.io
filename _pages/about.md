@@ -1,7 +1,7 @@
 ---
 layout: academic
-title: "AI Agents"
-description: "Enze Ma is a Computer Science Ph.D. student at UIC studying AI agents, with interests in memory, skills, reasoning, multimodal learning, and world models."
+title: "AI Research"
+description: "Enze Ma is a Computer Science Ph.D. student at UIC with broad interests in artificial intelligence, particularly AI agents and multimodal large language models."
 permalink: /
 ---
 <section class="hero" id="about" aria-labelledby="intro-title">
@@ -13,7 +13,7 @@ permalink: /
       <p>I'm a Ph.D. student at <a href="https://cs.uic.edu/">UIC</a>, advised by <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a> in the <a href="https://bdsc-uic.github.io/people.html">Big Data and Social Computing Lab</a>.</p>
       <p>Previously, I earned my B.S. and M.S. in Computer Science at <strong>UC San Diego</strong>, where I worked with <a href="https://zhiting.ucsd.edu/">Prof. Zhiting Hu</a>.</p>
     </div>
-    <p class="current-focus"><span aria-hidden="true">↳</span> Exploring how AI agents understand and interact with the world to help people accomplish tasks.</p>
+    <p class="current-focus"><span aria-hidden="true">↳</span> Exploring how AI systems learn, reason, and interact with people and the world.</p>
     <div class="social-links" aria-label="Contact and academic profiles">
       <a class="button button-primary" href="mailto:{{ site.author.email }}">Say hello <span aria-hidden="true">↗</span></a>
       <a href="{{ site.author.googlescholar }}">Scholar <span aria-hidden="true">↗</span></a>
@@ -33,13 +33,13 @@ permalink: /
 </section>
 
 <section class="section research-section" id="research" aria-labelledby="research-title">
-  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">AI Agents</h2></div>
+  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">Research Interests</h2></div>
   <div class="research-content">
-    <p class="section-intro">I study AI agents, with a focus on memory, skill learning and use, and reasoning for useful task assistance. My broader interests include multimodal learning and world models, particularly how they can help agents perceive, understand, and interact with their environment.</p>
+    <p class="section-intro">My research interests lie broadly in artificial intelligence, particularly AI agents and multimodal large language models. I'm interested in how these systems learn, reason, and interact with people and the world, and how memory, skills, and world models can support these capabilities.</p>
     <div class="research-grid">
-      <div class="research-topic"><span class="topic-number">01</span><h3>Memory & skills</h3><p>Remembering users and the world, learning reusable skills, and applying them to new tasks.</p></div>
+      <div class="research-topic"><span class="topic-number">01</span><h3>Agents, memory & skills</h3><p>Remembering users and the world, learning reusable skills, and applying them to new tasks.</p></div>
       <div class="research-topic"><span class="topic-number">02</span><h3>Reasoning & evaluation</h3><p>Understanding how language models reason, update beliefs, and learn from feedback.</p></div>
-      <div class="research-topic"><span class="topic-number">03</span><h3>Multimodal AI & world models</h3><p>Broader interests in how agents perceive, model, and interact with the world.</p></div>
+      <div class="research-topic"><span class="topic-number">03</span><h3>Multimodal LLMs</h3><p>Connecting language and perception to understand the world, with a broader interest in world models.</p></div>
     </div>
   </div>
 </section>
