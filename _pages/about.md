@@ -35,7 +35,7 @@ permalink: /
 <section class="section research-section" id="research" aria-labelledby="research-title">
   <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">Research Interests</h2></div>
   <div class="research-content">
-    <p class="section-intro">My research spans AI agents, large language models, and multimodal learning, with the goal of building more capable and adaptable AI systems. I'm interested in how AI systems can better understand the world and use what they learn to solve new problems.</p>
+    <p class="section-intro">My research spans AI agents, large language models, and multimodal learning, with the goal of building more capable and adaptable AI systems. I'm interested in how AI systems can better understand the world and apply what they learn to perform tasks more effectively.</p>
     <div class="research-grid">
       <div class="research-topic"><span class="topic-number">01</span><h3>AI Agents</h3><p>Memory, reusable skills, and learning from experience to help agents generalize across tasks and environments.</p></div>
       <div class="research-topic"><span class="topic-number">02</span><h3>Large Language Models</h3><p>Understanding and improving how language models reason, explore solutions, and respond to new evidence.</p></div>
