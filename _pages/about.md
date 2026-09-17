@@ -33,9 +33,9 @@ permalink: /
 </section>
 
 <section class="section research-section" id="research" aria-labelledby="research-title">
-  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">Memory, reasoning, <br>and the world in between.</h2></div>
+  <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">AI agents, memory, <br>and reasoning.</h2></div>
   <div class="research-content">
-    <p class="section-intro">I study how AI systems understand, remember, and interact with their environment. My work spans long-term agent memory, language-model reasoning, and multimodal learning, with applications in scientific discovery.</p>
+    <p class="section-intro">I study how AI agents remember, reason, and interact with their environment. My work spans long-term agent memory, language-model reasoning, and multimodal learning, with applications in scientific discovery.</p>
     <div class="research-grid">
       <div class="research-topic"><span class="topic-number">01</span><h3>Memory & agents</h3><p>Lasting memories of users and the world that make AI more personal and useful over time.</p></div>
       <div class="research-topic"><span class="topic-number">02</span><h3>Reasoning & evaluation</h3><p>Understanding how language models reason, update beliefs, and learn from feedback.</p></div>
