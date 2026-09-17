@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "AI Agents"
-description: "Enze Ma is a Computer Science Ph.D. student at UIC researching AI agents, memory, skills, reasoning, and multimodal intelligence."
+description: "Enze Ma is a Computer Science Ph.D. student at UIC studying AI agents, with interests in memory, skills, reasoning, multimodal learning, and world models."
 permalink: /
 ---
 <section class="hero" id="about" aria-labelledby="intro-title">
@@ -35,11 +35,11 @@ permalink: /
 <section class="section research-section" id="research" aria-labelledby="research-title">
   <div class="section-heading"><p class="eyebrow">02 / Research</p><h2 id="research-title">AI Agents</h2></div>
   <div class="research-content">
-    <p class="section-intro">I study how AI agents understand the world, learn from experience, and act to help people accomplish tasks. My work spans long-term memory, skill learning and use, language-model reasoning, and multimodal learning, with applications in scientific discovery.</p>
+    <p class="section-intro">I study AI agents, with a focus on memory, skill learning and use, and reasoning for useful task assistance. My broader interests include multimodal learning and world models, particularly how they can help agents perceive, understand, and interact with their environment.</p>
     <div class="research-grid">
       <div class="research-topic"><span class="topic-number">01</span><h3>Memory & skills</h3><p>Remembering users and the world, learning reusable skills, and applying them to new tasks.</p></div>
       <div class="research-topic"><span class="topic-number">02</span><h3>Reasoning & evaluation</h3><p>Understanding how language models reason, update beliefs, and learn from feedback.</p></div>
-      <div class="research-topic"><span class="topic-number">03</span><h3>Worlds & discovery</h3><p>Multimodal world models and AI systems that help make sense of complex scientific data.</p></div>
+      <div class="research-topic"><span class="topic-number">03</span><h3>Multimodal AI & world models</h3><p>Broader interests in how agents perceive, model, and interact with the world.</p></div>
     </div>
   </div>
 </section>
