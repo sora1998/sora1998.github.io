@@ -14,7 +14,7 @@
 - date: "2026-06-23"
   label: Preprint
   text: >-
-    Introducing **MEMAUDIT**, our benchmark for measuring what AI agents
+    Introducing **MemAudit**, our benchmark for measuring what AI agents
     actually remember about their users across interactions.
   url: "https://arxiv.org/abs/2606.24595"
 
