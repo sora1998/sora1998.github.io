@@ -18,6 +18,7 @@ permalink: /
       <a class="button button-primary" href="mailto:{{ site.author.email }}">Say hello <span aria-hidden="true">↗</span></a>
       <a href="{{ site.author.googlescholar }}">Scholar <span aria-hidden="true">↗</span></a>
       <a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn <span aria-hidden="true">↗</span></a>
       <a href="{{ site.author.orcid }}">ORCID <span aria-hidden="true">↗</span></a>
     </div>
   </div>
