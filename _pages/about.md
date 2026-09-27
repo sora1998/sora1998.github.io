@@ -56,7 +56,7 @@ permalink: /
 <section class="section experience-section" id="experience" aria-labelledby="experience-title">
   <div class="section-heading"><p class="eyebrow">04 / The journey</p><h2 id="experience-title">Education <br>& experience</h2></div>
   <ol class="experience-list">
-    <li><span class="experience-date">2024 — Present</span><div><h3>University of Illinois Chicago</h3><p>Ph.D. in Computer Science</p><span class="experience-note">Advisor: Prof. Philip S. Yu · BDSC Lab</span></div><span class="experience-tag">Research</span></li>
+    <li><span class="experience-date">2025 — Present</span><div><h3>University of Illinois Chicago</h3><p>Ph.D. in Computer Science</p><span class="experience-note">Advisor: Prof. Philip S. Yu · BDSC Lab</span></div><span class="experience-tag">Research</span></li>
     <li><span class="experience-date">2024 — 2025</span><div><h3>University of California San Diego</h3><p>Research Intern</p><span class="experience-note">Advisor: Prof. Zhiting Hu</span></div></li>
     <li><span class="experience-date">2022 — 2024</span><div><h3>University of California San Diego</h3><p>M.S. in Computer Science</p></div></li>
     <li><span class="experience-date">2020 — 2022</span><div><h3>University of California San Diego</h3><p>B.S. in Computer Science</p></div></li>
