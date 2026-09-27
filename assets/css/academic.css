@@ -144,9 +144,10 @@ h1,h2,h3 {
   height: 38px;
   border: 1px solid #a9bfd4;
   border-radius: 50%;
-  font: 25px var(--serif);
-  letter-spacing: -2px;
-  padding-right: 3px;
+  flex-shrink: 0;
+  font: 20px/1 var(--serif);
+  letter-spacing: -1px;
+  padding: 0;
   color: var(--accent)
 }
 
@@ -1116,7 +1117,7 @@ h1,h2,h3 {
   .brand-mark {
     width: 32px;
     height: 32px;
-    font-size: 22px
+    font-size: 17px
   }
   .site-nav {
     gap: 17px
