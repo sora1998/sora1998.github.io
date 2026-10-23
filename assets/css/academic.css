@@ -436,7 +436,7 @@ h1,h2,h3 {
   padding: 16px 18px 16px 20px;
   background: #eff4f9;
   border: 1px solid #d4e0eb;
-  border-radius: 5px
+  border-radius: 18px
 }
 
 .news-scroll::-webkit-scrollbar {
