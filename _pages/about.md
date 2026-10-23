@@ -64,4 +64,4 @@ permalink: /
   </ol>
 </section>
 
-<section class="contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">Let's connect</p><h2 id="contact-title">Good research starts <br>with a conversation.</h2><p>Always happy to talk about research, collaborations, or an interesting idea.</p><p class="personal-interests">Outside research, I enjoy video games and anime.</p></div><a class="contact-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></section>
+<section class="contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">Let's connect</p><h2 id="contact-title">Good research starts <br>with a conversation.</h2><p>Always happy to talk about research, collaborations, or an interesting idea.</p><p class="personal-interests">Outside research, I enjoy video games, anime, and watching VTubers.</p></div><a class="contact-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></section>
