@@ -178,7 +178,7 @@ h1,h2,h3 {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0,660px) minmax(260px,1fr);
+  grid-template-columns: minmax(0,660px) minmax(280px,1fr);
   gap: 64px;
   align-items: center;
   padding: 82px 0 80px
@@ -298,7 +298,7 @@ h1,h2,h3 {
 }
 
 .portrait {
-  width: 260px;
+  width: 280px;
   justify-self: center;
   position: relative;
   padding: 0 0 8px
@@ -321,7 +321,7 @@ h1,h2,h3 {
 
 .portrait img {
   width: 100%;
-  height: 315px;
+  height: 340px;
   object-fit: cover;
   object-position: 50% 64%;
   border-radius: 3px
@@ -962,23 +962,23 @@ h1,h2,h3 {
     max-width: 660px
   }
   .hero {
-    grid-template-columns: minmax(0,660px) minmax(260px,1fr)
+    grid-template-columns: minmax(0,660px) minmax(280px,1fr)
   }
   .portrait img {
-    height: 315px
+    height: 340px
   }
 }
 
 @media(max-width:1000px) {
   .portrait {
-    width: 200px
+    width: 220px
   }
 
   .shell {
     width: calc(100% - 64px)
   }
   .hero {
-    grid-template-columns: minmax(0,1fr) 200px;
+    grid-template-columns: minmax(0,1fr) 220px;
     gap: 55px;
     padding-block: 65px
   }
@@ -986,7 +986,7 @@ h1,h2,h3 {
     font-size: 78px
   }
   .portrait img {
-    height: 250px
+    height: 275px
   }
   .research-section,.experience-section {
     grid-template-columns: 230px minmax(0,1fr);
