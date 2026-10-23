@@ -3,9 +3,11 @@ title: "JARVIS-Bench: Benchmarking Personal Intelligence Agents on Long-Horizon 
 collection: publications
 category: conferences
 permalink: /publication/2026-jarvis-bench
-# Website entry date, not the acceptance date. The coauthor announced acceptance in September 2026.
-# Title and full author order: https://shanglinwu.github.io/
-date: 2026-10-23
+# Acceptance is known only to September 2026; the exact day is unknown.
+# September 1 is a sorting anchor for that month, not an asserted acceptance or publication day.
+# Title, author order, and acceptance month: https://shanglinwu.github.io/
+date: 2026-09-01
+date_precision: month
 venue: "NeurIPS 2026 · Evaluations & Datasets Track"
 short_title: "JARVIS-Bench"
 summary: "A benchmark for personal intelligence agents using long-horizon daily traces from real users."

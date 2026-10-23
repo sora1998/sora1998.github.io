@@ -5,76 +5,78 @@
 
 # Website announcement date. The coauthor announced acceptance in September 2026:
 # https://shanglinwu.github.io/
-- date: "2026-10-23"
+- date: "2026-10-22"
   label: Publication
   text: >-
-    **JARVIS-Bench** has been accepted to **NeurIPS 2026**
-    (Evaluations & Datasets Track).
+    Excited to share that **JARVIS-Bench** has been accepted to **NeurIPS 2026**
+    (Evaluations & Datasets Track)!
 
 - date: "2026-10-14"
   label: Preprint
   text: >-
-    Introducing **SkillNEO**, a framework for evolving reusable agent skills
-    from execution feedback while preserving promising intermediate revisions.
+    Our latest work, **SkillNEO**, is out! We explore how to evolve reusable
+    agent skills from execution feedback while preserving useful partial progress.
   url: "https://arxiv.org/abs/2610.20926"
 
 - date: "2026-09-26"
   label: Preprint
   text: >-
-    **How Far Do Persona Effects Generalize in Language Models?** is on arXiv,
-    studying when persona effects transfer across questions, models, and prompts.
+    Our new preprint, **How Far Do Persona Effects Generalize in Language Models?**,
+    is out! We study when persona effects carry over to new questions, models,
+    and prompts.
   url: "https://arxiv.org/abs/2609.32758"
 
 - date: "2026-09-14"
   label: Preprint
   text: >-
-    **Mind2Dialogue** is on arXiv. We use simulated user mental states to train
-    language models for more human-aware assistance.
+    Happy to share **Mind2Dialogue**, our work on training human-aware language
+    models using simulated user mental states.
   url: "https://arxiv.org/abs/2609.15972"
 
 - date: "2026-08-27"
   label: Publication
   text: >-
-    **Sycophancy Suppression Can Impair Rational Updating** is now on arXiv,
-    accepted to **EMNLP 2026 Findings**. We study how to reduce sycophancy while
-    preserving a model's ability to learn from useful feedback.
+    Our paper, **Sycophancy Suppression Can Impair Rational Updating**, is on arXiv
+    and has been accepted to **EMNLP 2026 Findings**! We study how to reduce
+    sycophancy while preserving a model's ability to learn from useful feedback.
   url: "https://arxiv.org/abs/2608.26511"
 
 - date: "2026-06-23"
   label: Preprint
   text: >-
-    Introducing **MemAudit**, our benchmark for measuring what AI agents
-    actually remember about their users across interactions.
+    Excited to share **MemAudit**, our benchmark for auditing what AI agents
+    retain about their users across interactions.
   url: "https://arxiv.org/abs/2606.24595"
 
 # The survey PDF was first uploaded in repository commit 7ebf96f5b20939526df02b0309118b66becc8317.
 - date: "2026-06-12"
   label: Survey
   text: >-
-    Our survey, **The Landscape of Agentic Time Series Systems**, is available,
-    covering system architectures, reliability, and open research directions.
+    Our survey, **The Landscape of Agentic Time Series Systems**, is now available!
+    We bring together recent work on system architectures, reliability, and
+    open research directions.
   url: "https://github.com/TROUBADOUR000/Awesome-Agentic-Time-Series"
 
 - date: "2026-05-21"
   label: Preprint
   text: >-
-    **ARC-STAR** is on arXiv. We develop auditable corrections for PDE foundation
-    models, focusing computation on regions that need refinement.
+    Happy to share **ARC-STAR**, our work on auditable corrections for PDE
+    foundation models. We focus computation on regions that need refinement.
   url: "https://arxiv.org/abs/2605.22222"
 
 # COLM acceptance was announced in July 2026: https://exlaw.github.io/#news
 - date: "2026-04-01"
   label: Publication
   text: >-
-    **Locally Confident, Globally Stuck** is on arXiv, studying quality versus
-    exploration in diffusion language models. Update: accepted to **COLM 2026**
-    in July.
+    Our preprint, **Locally Confident, Globally Stuck**, is out! We explore the
+    trade-off between quality and exploration in diffusion language models.
+    July update: excited to share that it has been accepted to **COLM 2026**.
   url: "https://arxiv.org/abs/2604.00375"
 
 - date: "2026-02-12"
   label: Preprint
   text: >-
-    **CellMaster** is now on arXiv: an AI agent for interpretable cell type
+    Happy to share **CellMaster**, our AI agent for interpretable cell type
     annotation, with support for collaborative human refinement.
   url: "https://arxiv.org/abs/2602.13346"
 
@@ -82,14 +84,15 @@
 - date: "2025-11-12"
   label: Preprint
   text: >-
-    The original **PAN** preprint is released: a world model for interactive,
-    long-horizon simulation guided by natural language actions.
+    Excited to share the original **PAN** preprint, our work on a world model
+    for interactive, long-horizon simulation guided by natural language actions.
   url: "https://arxiv.org/abs/2511.09057v3"
 
 # OpenReview lists 18 September 2025 as the publication date.
 - date: "2025-09-18"
   label: Publication
   text: >-
-    **scPilot** is a **NeurIPS 2025 poster**. Our framework brings LLM reasoning
-    to single-cell analysis, supported by the scBench evaluation suite.
+    Happy to share that **scPilot** is a **NeurIPS 2025 poster**! Our framework
+    brings LLM reasoning to single-cell analysis, supported by the scBench
+    evaluation suite.
   url: "https://openreview.net/forum?id=Vzi96rTe4w"

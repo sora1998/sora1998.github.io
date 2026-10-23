@@ -178,8 +178,8 @@ h1,h2,h3 {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0,1fr) 230px;
-  gap: 80px;
+  grid-template-columns: minmax(0,660px) minmax(260px,1fr);
+  gap: 64px;
   align-items: center;
   padding: 82px 0 80px
 }
@@ -298,6 +298,8 @@ h1,h2,h3 {
 }
 
 .portrait {
+  width: 260px;
+  justify-self: center;
   position: relative;
   padding: 0 0 8px
 }
@@ -319,7 +321,7 @@ h1,h2,h3 {
 
 .portrait img {
   width: 100%;
-  height: 280px;
+  height: 315px;
   object-fit: cover;
   object-position: 50% 64%;
   border-radius: 3px
@@ -378,6 +380,17 @@ h1,h2,h3 {
   gap: 45px
 }
 
+.news-section {
+  grid-template-columns: 220px minmax(0,1fr);
+  gap: 40px;
+  align-items: center
+}
+
+.news-section .section-heading {
+  justify-self: center;
+  text-align: center
+}
+
 .section-intro {
   font-size: 15px;
   line-height: 1.85;
@@ -420,10 +433,7 @@ h1,h2,h3 {
   scrollbar-width: thin;
   scrollbar-color: #9fb5c9 transparent;
   scrollbar-gutter: stable;
-  padding: 20px 22px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: rgba(255,255,255,.55)
+  padding: 0 16px 8px 0
 }
 
 .news-scroll::-webkit-scrollbar {
@@ -953,14 +963,18 @@ h1,h2,h3 {
     max-width: 660px
   }
   .hero {
-    grid-template-columns: minmax(0,1fr) 230px
+    grid-template-columns: minmax(0,660px) minmax(260px,1fr)
   }
   .portrait img {
-    height: 280px
+    height: 315px
   }
 }
 
 @media(max-width:1000px) {
+  .portrait {
+    width: 200px
+  }
+
   .shell {
     width: calc(100% - 64px)
   }
@@ -978,6 +992,10 @@ h1,h2,h3 {
   .research-section,.news-section,.experience-section {
     grid-template-columns: 230px minmax(0,1fr);
     gap: 30px
+  }
+  .news-section {
+    grid-template-columns: 180px minmax(0,1fr);
+    gap: 28px
   }
   .section-heading h2,.section-topline h2 {
     font-size: 32px
@@ -1001,6 +1019,14 @@ h1,h2,h3 {
 }
 
 @media(max-width:760px) {
+  .portrait {
+    width: 160px
+  }
+  .news-section .section-heading {
+    justify-self: start;
+    text-align: left
+  }
+
   html {
     scroll-padding-top: 95px
   }
@@ -1141,7 +1167,7 @@ h1,h2,h3 {
     font-size: 16px
   }
   .news-scroll {
-    padding: 16px 14px
+    padding: 0 10px 8px 0
   }
 
   .header-inner {
