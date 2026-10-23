@@ -7,7 +7,7 @@ permalink: /
 <section class="hero" id="about" aria-labelledby="intro-title">
   <div class="hero-copy">
     <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Ph.D. student · Computer Science</p>
-    <h1 id="intro-title">Enze Ma<span class="name-period">.</span></h1>
+    <h1 id="intro-title">Enze Ma</h1>
     <p class="hero-affiliation">University of Illinois Chicago</p>
     <div class="intro-text">
       <p>I'm a Ph.D. student at <a href="https://cs.uic.edu/">UIC</a>, advised by <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a> in the <a href="https://bdsc-uic.github.io/people.html">Big Data and Social Computing Lab</a>. Previously, I earned my B.S. and M.S. in Computer Science at <strong>UC San Diego</strong>, where I worked with <a href="https://zhiting.ucsd.edu/">Prof. Zhiting Hu</a>.</p>
