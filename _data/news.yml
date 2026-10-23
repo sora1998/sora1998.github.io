@@ -1,7 +1,36 @@
 # Add a new entry at the top to publish an update; no template changes are needed.
-# Keep dates quoted (YYYY-MM-DD), use Markdown in text, and link the source in url.
-# Dates below mark paper releases (arXiv, the authors' repository, or OpenReview),
-# not inferred acceptance dates. Later acceptance updates are stated explicitly.
+# Keep dates quoted (YYYY-MM-DD), use Markdown in text, and optionally link a public source in url.
+# Dates mark paper releases unless explicitly identified as website announcement dates.
+# Later acceptance updates are stated explicitly; acceptance dates are not inferred.
+
+# Website announcement date. The coauthor announced acceptance in September 2026:
+# https://shanglinwu.github.io/
+- date: "2026-10-23"
+  label: Publication
+  text: >-
+    **JARVIS-Bench** has been accepted to **NeurIPS 2026**
+    (Evaluations & Datasets Track).
+
+- date: "2026-10-14"
+  label: Preprint
+  text: >-
+    Introducing **SkillNEO**, a framework for evolving reusable agent skills
+    from execution feedback while preserving promising intermediate revisions.
+  url: "https://arxiv.org/abs/2610.20926"
+
+- date: "2026-09-26"
+  label: Preprint
+  text: >-
+    **How Far Do Persona Effects Generalize in Language Models?** is on arXiv,
+    studying when persona effects transfer across questions, models, and prompts.
+  url: "https://arxiv.org/abs/2609.32758"
+
+- date: "2026-09-14"
+  label: Preprint
+  text: >-
+    **Mind2Dialogue** is on arXiv. We use simulated user mental states to train
+    language models for more human-aware assistance.
+  url: "https://arxiv.org/abs/2609.15972"
 
 - date: "2026-08-27"
   label: Publication

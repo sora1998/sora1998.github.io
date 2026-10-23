@@ -1,0 +1,87 @@
+---
+title: "JARVIS-Bench: Benchmarking Personal Intelligence Agents on Long-Horizon Real-User Daily Traces"
+collection: publications
+category: conferences
+permalink: /publication/2026-jarvis-bench
+# Website entry date, not the acceptance date. The coauthor announced acceptance in September 2026.
+# Title and full author order: https://shanglinwu.github.io/
+date: 2026-10-23
+venue: "NeurIPS 2026 · Evaluations & Datasets Track"
+short_title: "JARVIS-Bench"
+summary: "A benchmark for personal intelligence agents using long-horizon daily traces from real users."
+topic: "AI Agents"
+selected: true
+linkless: true
+display_authors:
+  - "Weizhi Zhang"
+  - "Wei-Chieh Huang"
+  - "Yueqing Liang"
+  - "…"
+  - "Enze Ma"
+  - "…"
+  - "Philip S. Yu"
+authors:
+  - "Weizhi Zhang"
+  - "Wei-Chieh Huang"
+  - "Yueqing Liang"
+  - "Liwei Jiang"
+  - "Zhengxiang Wang"
+  - "Liangwei Yang"
+  - "Zechen Li"
+  - "Yuchen Wu"
+  - "Haozhen Zhang"
+  - "Yu Wang"
+  - "Yuanchen Bei"
+  - "Yue Zhou"
+  - "Siqi Zhu"
+  - "Henry Peng Zou"
+  - "Jiahong Liu"
+  - "Xinni Zhang"
+  - "Paul Martin"
+  - "Joseph Marvin Imperial"
+  - "Yuyang Luo"
+  - "Xiongxiao Xu"
+  - "Baixiang Huang"
+  - "Shanglin Wu"
+  - "Lucas Resck"
+  - "Yibo Wang"
+  - "Yuqing Liu"
+  - "Langzhou He"
+  - "Chengze Li"
+  - "Yuxin Tian"
+  - "Kening Zheng"
+  - "Enze Ma"
+  - "Boi Huynh"
+  - "Zheng Hui"
+  - "Rui Yang"
+  - "Tao Feng"
+  - "Jie Yang"
+  - "Shanghao Li"
+  - "Haoran Wang"
+  - "Wooseong Yang"
+  - "Hanrong Zhang"
+  - "Huanhuan Ma"
+  - "Daye Yoon"
+  - "Yaozu Wu"
+  - "Shikan Lian"
+  - "Xiaoqian Ruan"
+  - "Fangxin Wang"
+  - "Hyeonjeong Park"
+  - "Hins Hu"
+  - "Wenzhe Fan"
+  - "Chen Wang"
+  - "Yifan Gu"
+  - "Dongyuan Li"
+  - "Song Wang"
+  - "Aylin Caliskan"
+  - "Jindong Wang"
+  - "Xiao Luo"
+  - "Yankai Chen"
+  - "Kai Shu"
+  - "Xue Liu"
+  - "Philip S. Yu"
+---
+
+Accepted to **NeurIPS 2026 (Evaluations & Datasets Track)**.
+
+**JARVIS-Bench** benchmarks personal intelligence agents on long-horizon daily traces from real users.
