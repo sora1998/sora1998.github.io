@@ -29,7 +29,9 @@ permalink: /
 
 <section class="section news-section" id="news" aria-labelledby="news-title">
   <div class="section-heading"><p class="eyebrow">01 / Latest updates</p><h2 id="news-title">News<span class="name-period">.</span></h2><a class="text-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a></div>
-  {% include news-list.html limit=5 %}
+  <div class="news-scroll" role="region" aria-labelledby="news-title" tabindex="0">
+    {% include news-list.html %}
+  </div>
 </section>
 
 <section class="section research-section" id="research" aria-labelledby="research-title">
@@ -62,4 +64,4 @@ permalink: /
   </ol>
 </section>
 
-<section class="contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">Let's connect</p><h2 id="contact-title">Good research starts <br>with a conversation.</h2><p>Always happy to talk about research, collaborations, or an interesting idea.</p></div><a class="contact-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></section>
+<section class="contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">Let's connect</p><h2 id="contact-title">Good research starts <br>with a conversation.</h2><p>Always happy to talk about research, collaborations, or an interesting idea.</p><p class="personal-interests">Outside research, I enjoy video games and anime.</p></div><a class="contact-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></section>
