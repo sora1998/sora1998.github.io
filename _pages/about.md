@@ -11,6 +11,7 @@ permalink: /
     <p class="hero-affiliation">University of Illinois Chicago</p>
     <div class="intro-text">
       <p>I'm a Ph.D. student at <a href="https://cs.uic.edu/">UIC</a>, advised by <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a> in the <a href="https://bdsc-uic.github.io/people.html">Big Data and Social Computing Lab</a>. Previously, I earned my B.S. and M.S. in Computer Science at <strong>UC San Diego</strong>, where I worked with <a href="https://zhiting.ucsd.edu/">Prof. Zhiting Hu</a>.</p>
+      <p class="personal-interests">Outside research, I enjoy video games, anime, and watching VTubers. I'm always happy to swap recommendations and chat about what we're playing or watching.</p>
     </div>
     <p class="current-focus"><span aria-hidden="true">↳</span> Exploring how AI systems learn, reason, and interact with people and the world.</p>
     <div class="social-links" aria-label="Contact and academic profiles">
@@ -28,7 +29,7 @@ permalink: /
 </section>
 
 <section class="section news-section" id="news" aria-labelledby="news-title">
-  <div class="section-heading"><p class="eyebrow">01 / Latest updates</p><h2 id="news-title">News<span class="name-period">.</span></h2><a class="text-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a></div>
+  <div class="section-topline"><div><p class="eyebrow">01 / Latest updates</p><h2 id="news-title">News<span class="name-period">.</span></h2></div><a class="text-link" href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a></div>
   <div class="news-scroll" role="region" aria-labelledby="news-title" tabindex="0">
     {% include news-list.html %}
   </div>
@@ -64,4 +65,4 @@ permalink: /
   </ol>
 </section>
 
-<section class="contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">Let's connect</p><h2 id="contact-title">Good research starts <br>with a conversation.</h2><p>Always happy to talk about research, collaborations, or an interesting idea.</p><p class="personal-interests">Outside research, I enjoy video games, anime, and watching VTubers.</p></div><a class="contact-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></section>
+<section class="contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">Let's connect</p><h2 id="contact-title">Good research starts <br>with a conversation.</h2><p>Always happy to talk about research, collaborations, or an interesting idea.</p></div><a class="contact-link" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a></section>
