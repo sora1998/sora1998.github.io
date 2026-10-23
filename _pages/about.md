@@ -11,7 +11,7 @@ permalink: /
     <p class="hero-affiliation">University of Illinois Chicago</p>
     <div class="intro-text">
       <p>I'm a Ph.D. student at <a href="https://cs.uic.edu/">UIC</a>, advised by <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a> in the <a href="https://bdsc-uic.github.io/people.html">Big Data and Social Computing Lab</a>. Previously, I earned my B.S. and M.S. in Computer Science at <strong>UC San Diego</strong>, where I worked with <a href="https://zhiting.ucsd.edu/">Prof. Zhiting Hu</a>.</p>
-      <p class="personal-interests">Outside research, I enjoy video games, anime, and watching VTubers. I'm always happy to swap recommendations and chat about what we're playing or watching.</p>
+      <p class="personal-interests">Outside research, I enjoy video games, anime, and watching VTubers. I also follow soccer, basketball, and Formula 1.</p>
     </div>
     <p class="current-focus"><span aria-hidden="true">↳</span> Exploring how AI systems learn, reason, and interact with people and the world.</p>
     <div class="social-links" aria-label="Contact and academic profiles">
