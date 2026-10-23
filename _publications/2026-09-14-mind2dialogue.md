@@ -9,7 +9,7 @@ paperurl: "https://arxiv.org/abs/2609.15972"
 codeurl: "https://github.com/wannabeyourfriend/mind2dialogue"
 projecturl: "https://wannabeyourfriend.github.io/mind2dialogue/"
 short_title: "Mind2Dialogue"
-summary: "Training language models to better understand and assist users through conversations grounded in simulated beliefs and goals."
+summary: "Training human-aware assistants from an Oracle that sees simulated user mental states, while withholding those states from the student."
 topic: "AI Agents"
 selected: false
 authors:

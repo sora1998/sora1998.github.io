@@ -8,7 +8,7 @@ venue: "Findings of EMNLP 2026 · Accepted"
 paperurl: "https://arxiv.org/abs/2608.26511"
 codeurl: "https://github.com/dependentsign/sycophancy-rational-updating"
 short_title: "Sycophancy & Rational Updating"
-summary: "Evaluating how anti-sycophancy interventions affect a model's ability to revise answers when new evidence is valid."
+summary: "Anti-sycophancy interventions can also suppress evidence-based corrections; behavioral and mechanistic analyses expose this trade-off."
 topic: "Reasoning & Reliability"
 selected: true
 authors:

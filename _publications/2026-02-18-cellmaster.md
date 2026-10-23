@@ -8,7 +8,7 @@ venue: "arXiv 2026 · Preprint"
 paperurl: "https://arxiv.org/abs/2602.13346"
 codeurl: "https://github.com/AnonymousGym/CellMaster"
 short_title: "CellMaster"
-summary: "An AI agent for interpretable cell-type annotation with expert feedback and zero-shot biological reasoning."
+summary: "Zero-shot cell annotation through iterative biological hypothesis testing, with expert feedback to refine marker selection and cell identities."
 topic: "AI for Science"
 selected: false
 authors:

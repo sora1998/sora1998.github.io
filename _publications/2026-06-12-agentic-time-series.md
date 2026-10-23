@@ -8,7 +8,7 @@ venue: "2026 · Survey preprint"
 paperurl: "https://github.com/TROUBADOUR000/Awesome-Agentic-Time-Series/blob/main/The%20Landscape%20of%20Agentic%20Time%20Series%20Systems.pdf"
 codeurl: "https://github.com/TROUBADOUR000/Awesome-Agentic-Time-Series"
 short_title: "Agentic Time Series Systems"
-summary: "A survey of time-series agents that connects perception, reasoning, action, memory, and world models with reliability."
+summary: "A five-layer framework for agentic time-series systems, connecting perception, reasoning, action, memory, and world models with reliability and evaluation."
 topic: "AI Agents"
 selected: false
 source_note: "Date records the first upload of the survey PDF to the authors' public repository."

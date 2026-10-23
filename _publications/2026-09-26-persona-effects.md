@@ -8,7 +8,7 @@ venue: "arXiv 2026 · Preprint"
 paperurl: "https://arxiv.org/abs/2609.32758"
 # The code URL listed on arXiv returned HTTP 404 when checked on 2026-10-23.
 short_title: "Persona Effects"
-summary: "Studying when persona effects predict new responses and whether they transfer across models and prompts."
+summary: "Persona effects can predict new responses yet transfer poorly across models and prompts; apparent transfer gains can come from target calibration."
 topic: "Large Language Models"
 selected: false
 authors:

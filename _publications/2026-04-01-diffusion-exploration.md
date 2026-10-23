@@ -8,7 +8,7 @@ venue: "COLM 2026 · Accepted"
 venue_source: "https://exlaw.github.io/"
 paperurl: "https://arxiv.org/abs/2604.00375"
 short_title: "Locally Confident, Globally Stuck"
-summary: "Understanding and improving the trade-off between answer quality and reasoning-path exploration in diffusion LLMs."
+summary: "Explaining the quality–exploration trade-off in diffusion language models and improving it with a lookahead-corrected Metropolis–Hastings sampler."
 topic: "Reasoning & Reliability"
 selected: true
 authors:
