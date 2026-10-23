@@ -1,5 +1,6 @@
 # Add a new entry at the top to publish an update; no template changes are needed.
 # Keep news to short release or acceptance announcements, without research summaries.
+# Introduce titles with paper/preprint/survey; do not surround titles with appositive commas.
 # Keep dates quoted (YYYY-MM-DD), use Markdown in text, and optionally link a public source in url.
 # Dates mark paper releases unless explicitly identified as website announcement dates.
 # Later acceptance updates are stated explicitly; acceptance dates are not inferred.
@@ -9,75 +10,74 @@
 - date: "2026-10-22"
   label: Publication
   text: >-
-    Excited to share that **JARVIS-Bench** has been accepted to **NeurIPS 2026**
-    (Evaluations & Datasets Track)!
+    Excited to share that our paper **JARVIS-Bench** has been accepted to **NeurIPS 2026** (Evaluations & Datasets Track)!
 
 - date: "2026-10-14"
   label: Preprint
   text: >-
-    Our latest work, **SkillNEO**, is now on arXiv!
+    Our new preprint **SkillNEO** is now on arXiv!
   url: "https://arxiv.org/abs/2610.20926"
 
 - date: "2026-09-26"
   label: Preprint
   text: >-
-    Our new preprint, **How Far Do Persona Effects Generalize in Language Models?**, is now on arXiv!
+    Our new preprint **How Far Do Persona Effects Generalize in Language Models?** is now on arXiv!
   url: "https://arxiv.org/abs/2609.32758"
 
 - date: "2026-09-14"
   label: Preprint
   text: >-
-    Happy to share **Mind2Dialogue**, now available on arXiv!
+    Happy to share our preprint **Mind2Dialogue** on arXiv!
   url: "https://arxiv.org/abs/2609.15972"
 
 - date: "2026-08-27"
   label: Publication
   text: >-
-    Our paper, **Sycophancy Suppression Can Impair Rational Updating**, is on arXiv and has been accepted to **EMNLP 2026 Findings**!
+    Our paper **Sycophancy Suppression Can Impair Rational Updating** is on arXiv and has been accepted to **EMNLP 2026 Findings**!
   url: "https://arxiv.org/abs/2608.26511"
 
 - date: "2026-06-23"
   label: Preprint
   text: >-
-    Excited to share **MemAudit**, now available on arXiv!
+    Excited to share our preprint **MemAudit** on arXiv!
   url: "https://arxiv.org/abs/2606.24595"
 
 # The survey PDF was first uploaded in repository commit 7ebf96f5b20939526df02b0309118b66becc8317.
 - date: "2026-06-12"
   label: Survey
   text: >-
-    Our survey, **The Landscape of Agentic Time Series Systems**, is now available on GitHub!
+    Our survey **The Landscape of Agentic Time Series Systems** is now available on GitHub!
   url: "https://github.com/TROUBADOUR000/Awesome-Agentic-Time-Series"
 
 - date: "2026-05-21"
   label: Preprint
   text: >-
-    Happy to share **ARC-STAR**, now available on arXiv!
+    Happy to share our preprint **ARC-STAR** on arXiv!
   url: "https://arxiv.org/abs/2605.22222"
 
 # COLM acceptance was announced in July 2026: https://exlaw.github.io/#news
 - date: "2026-04-01"
   label: Publication
   text: >-
-    Our preprint, **Locally Confident, Globally Stuck**, is on arXiv! July update: accepted to **COLM 2026**.
+    Our preprint **Locally Confident, Globally Stuck** is on arXiv! July update: accepted to **COLM 2026**.
   url: "https://arxiv.org/abs/2604.00375"
 
 - date: "2026-02-12"
   label: Preprint
   text: >-
-    Happy to share **CellMaster**, now available on arXiv!
+    Happy to share our preprint **CellMaster** on arXiv!
   url: "https://arxiv.org/abs/2602.13346"
 
 # This marks the original release; v3 retains the original title and author list.
 - date: "2025-11-12"
   label: Preprint
   text: >-
-    Excited to share **PAN**, now available on arXiv!
+    Excited to share our preprint **PAN** on arXiv!
   url: "https://arxiv.org/abs/2511.09057v3"
 
 # OpenReview lists 18 September 2025 as the publication date.
 - date: "2025-09-18"
   label: Publication
   text: >-
-    Happy to share that **scPilot** is a **NeurIPS 2025 poster**!
+    Happy to share that our paper **scPilot** has been accepted to **NeurIPS 2025** as a poster!
   url: "https://openreview.net/forum?id=Vzi96rTe4w"
